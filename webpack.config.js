@@ -4,17 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-  entry: './server.js',
+  entry: './src/app.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'static'),
     filename: 'bundle.js',
   },
   module: {
     rules: [
-      {
-        test: /\.pug$/,
-        use: ['html-loader', 'pug-html-loader'],
-      },
       {
         test: /\.sass$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
@@ -25,5 +21,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "css/style.css",
     }),
-  ]
+  ],
+  watch: true
 };
