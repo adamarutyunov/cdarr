@@ -1,2 +1,49 @@
-body{background-color:white}
+* {
+  padding: 0;
+  margin: 0; }
+
+@font-face {
+  font-family: 'GolosTextVF';
+  src: url(/static/fonts/GolosTextVF.ttf);
+  font-weight: normal;
+  font-style: normal; }
+
+header {
+  display: block;
+  margin: 10px 75px; }
+
+body {
+  background-color: white;
+  font-family: 'GolosTextVF';
+  font-size: 30pt; }
+
+img {
+  width: 100%; }
+
+h1 {
+  font-variation-settings: "wght" 650;
+  font-size: 175pt; }
+
+h2 {
+  font-variation-settings: "wght" 500;
+  font-weight: normal;
+  font-size: 90pt; }
+
+.fline {
+  display: flex; }
+  .fline .me {
+    flex: 0 270px; }
+  .fline .line {
+    display: flex;
+    align-items: center;
+    flex: 1 auto; }
+    .fline .line svg {
+      vertical-align: center; }
+
+.logo {
+  position: absolute;
+  top: -40px;
+  left: -10px;
+  z-index: -1;
+  width: 655px; }
 

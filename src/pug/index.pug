@@ -1,5 +1,17 @@
 extends base.pug
 
 block content
-  p
-    | Привет жопа
+  header
+    div.logo
+      img(src="/static/svg/circle.svg")
+    div.fline
+      div.me
+        h1
+          |Я
+      div.line
+        svg(width="100%" height="35")
+          rect(fill="#000" width="100%" height="100%")
+    h2
+      |Адам Арутюнов
+
+  div#main

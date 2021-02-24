@@ -4,13 +4,26 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
+  mode: 'development',
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'static'),
     filename: 'bundle.js',
+    publicPath: '/static'
   },
   module: {
     rules: [
+      {
+        test: /\.(ttf|svg)$/,
+        use: [
+          {
+          loader: 'file-loader',
+          options: {
+            name: '/fonts/[name].[ext]',
+          },
+        },
+      ]
+      },
       {
         test: /\.sass$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
