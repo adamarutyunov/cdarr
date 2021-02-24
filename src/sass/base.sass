@@ -1,6 +1,13 @@
+$hover-color: #0082ff
+
 *
     padding: 0
     margin: 0
+    position: relative
+
+
+html
+    overflow-x: hidden
 
 
 @font-face
@@ -12,12 +19,15 @@
 header
     display: block
     margin: 10px 75px
+    height: 615px
 
 
 body
     background-color: white
     font-family: 'GolosTextVF'
-    font-size: 30pt
+    font-weight: normal
+    font-variation-settings: "wght" 430
+    font-size: 25pt
 
 img
     width: 100%
@@ -30,3 +40,46 @@ h2
     font-variation-settings: "wght" 500
     font-weight: normal
     font-size: 90pt;
+
+h3
+    font-variation-settings: "wght" 300
+    font-weight: normal
+    font-size: 45pt;
+
+a
+    text-decoration: none
+    border-bottom: 3px solid black
+    color: black
+
+    &:hover
+        color: $hover-color !important
+        border-color: $hover-color !important
+
+    &.dashed
+        border-bottom: 2px dashed black
+
+    &.implicit
+        border: none
+
+p
+    margin-top: 20px
+
+#main
+    margin: 80px 75px 100px 75px
+
+
+sspace
+    display: block
+    height: 10px
+
+mspace
+    display: block
+    height: 30px
+
+lspace
+    display: block
+    height: 50px
+
+xspace
+    display: block
+    height: 100px

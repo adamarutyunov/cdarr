@@ -1,6 +1,10 @@
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  position: relative; }
+
+html {
+  overflow-x: hidden; }
 
 @font-face {
   font-family: 'GolosTextVF';
@@ -10,12 +14,15 @@
 
 header {
   display: block;
-  margin: 10px 75px; }
+  margin: 10px 75px;
+  height: 615px; }
 
 body {
   background-color: white;
   font-family: 'GolosTextVF';
-  font-size: 30pt; }
+  font-weight: normal;
+  font-variation-settings: "wght" 430;
+  font-size: 25pt; }
 
 img {
   width: 100%; }
@@ -29,6 +36,45 @@ h2 {
   font-weight: normal;
   font-size: 90pt; }
 
+h3 {
+  font-variation-settings: "wght" 300;
+  font-weight: normal;
+  font-size: 45pt; }
+
+a {
+  text-decoration: none;
+  border-bottom: 3px solid black;
+  color: black; }
+  a:hover {
+    color: #0082ff !important;
+    border-color: #0082ff !important; }
+  a.dashed {
+    border-bottom: 2px dashed black; }
+  a.implicit {
+    border: none; }
+
+p {
+  margin-top: 20px; }
+
+#main {
+  margin: 80px 75px 100px 75px; }
+
+sspace {
+  display: block;
+  height: 10px; }
+
+mspace {
+  display: block;
+  height: 30px; }
+
+lspace {
+  display: block;
+  height: 50px; }
+
+xspace {
+  display: block;
+  height: 100px; }
+
 .fline {
   display: flex; }
   .fline .me {
@@ -40,10 +86,53 @@ h2 {
     .fline .line svg {
       vertical-align: center; }
 
-.logo {
+.svg {
   position: absolute;
+  z-index: -1; }
+
+#logo {
   top: -40px;
-  left: -10px;
-  z-index: -1;
+  left: -89px;
   width: 655px; }
+
+#oval {
+  top: 170px;
+  width: 1100px;
+  left: 220px; }
+
+#line {
+  top: 1300px;
+  width: 2000px;
+  left: -100px; }
+
+#hexagon {
+  top: 2000px;
+  width: 800px;
+  left: 500px; }
+
+.content-block {
+  display: flex;
+  margin-bottom: 30px;
+  margin-top: 30px; }
+  .content-block .project-logo {
+    display: flex;
+    align-items: center;
+    flex: 0 0 350px;
+    margin: 0 30px 0 10px;
+    padding: 35px 50px; }
+  .content-block .description {
+    display: flex;
+    flex-direction: column;
+    flex: 1 auto;
+    padding: 35px 50px; }
+
+.alpha {
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.rounded {
+  border-radius: 10px; }
+
+.mail {
+  width: 800px;
+  margin: 50px 0; }
 

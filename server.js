@@ -3,7 +3,7 @@ const reload = require('reload')
 const http = require('http')
 const app = express()
 const port = 80
-const DEBUG = process.argv[2] == "-D"
+const DEBUG = (process.argv[2] == "-D")
 
 
 app.set('views', './src/pug')
