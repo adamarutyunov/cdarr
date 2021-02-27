@@ -12,7 +12,15 @@ app.use('/static', express.static('static'));
 
 
 app.get('/', (req, res) => {
-    res.render('index', {title: "Я — Адам Арутюнов"});
+    res.render('index', {title: "Я"});
+})
+
+app.get('/pycon', (req, res) => {
+    res.render('pycon', {title: "Pycon"});
+})
+
+app.get('/chekker', (req, res) => {
+    res.render('chekker', {title: "Chekker"});
 })
 
 

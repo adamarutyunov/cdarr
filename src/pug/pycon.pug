@@ -1,0 +1,84 @@
+extends header.pug
+
+block project
+  h3
+    | Пайкон
+
+  p.big.
+    В технических университетах существует проблема с проверкой кода.
+    Ручная проверка неэффективна и не учитывает все возможные ошибки, но её можно автоматизировать
+    с помощью тестов. Существующие платформы
+    нужны только для проведения олимпиад или их сложно освоить и постоянно использовать при обучении.
+  p.big.
+    Пайкон — это платформа для тренировки
+    решения алгоритмических задач и проведения соревнований и проверочных работ.
+
+  mspace
+  img.rounded.shadowed(src="/static/img/pycon/1.png")
+  mspace
+
+  p.
+    В задаче описывается условие и формат входных данных. Для каждой задачи автор составляет набор тестов,
+    на которых решение проверяется автоматически — чекер сравнивает выходные данные программы и эталонный ответ.
+
+  mspace
+  img.rounded.shadowed(src="/static/img/pycon/2.png")
+  mspace
+
+  p.
+    После автоматической проверки чекер выносит решению вердикт.
+
+  mspace
+  img.rounded.shadowed(src="/static/img/pycon/3.png")
+  mspace
+
+  div.verdicts
+    div.verdict#verdict-ok(onmouseover="window.set_verdict_description(this)", onmouseout="window.clear_description(this)")
+      | OK
+    div.verdict#verdict-wa(onmouseover="window.set_verdict_description(this)", onmouseout="window.clear_description(this)")
+      | WA
+    div.verdict#verdict-re(onmouseover="window.set_verdict_description(this)", onmouseout="window.clear_description(this)")
+      | RE
+    div.verdict#verdict-tl(onmouseover="window.set_verdict_description(this)", onmouseout="window.clear_description(this)")
+      | TL
+    div.verdict#verdict-ce(onmouseover="window.set_verdict_description(this)", onmouseout="window.clear_description(this)")
+      | CE
+    div.verdict#verdict-ml(onmouseover="window.set_verdict_description(this)", onmouseout="window.clear_description(this)")
+      | ML
+    div.verdict#verdict-te(onmouseover="window.set_verdict_description(this)", onmouseout="window.clear_description(this)")
+      | TE
+
+  span#verdict-description
+
+  p.
+    Контест — соревнование, в течение которого нужно решить наибольшее количество задач. Контест начинается и заканчивается
+    в одно и то же время для всех участников. В отличие от него работу можно начать в любое удобное время, однако время выполнения
+    тоже зафиксировано.
+
+  mspace
+  img.rounded.shadowed(src="/static/img/pycon/4.png")
+  mspace
+
+
+  p.
+    У каждого пользователя есть роль, которая определяется набором прав.
+    Это отвязывает систему от администратора и позволяет преподавателям
+    создавать задачи, а старостам — управлять группами.
+
+  mspace
+  img.rounded.shadowed(src="/static/img/pycon/5.png")
+  mspace
+
+  p
+    |В августе–ноябре 2020 года Пайкон тестировался на студентах
+    |Ростова-на-Дону, а в декабре получил статус 
+    a(href="https://www.donland.ru/news/11807/")
+      | лучшего&nbsp;IT-проекта
+    |  области.
+
+  mspace
+
+  div.actionlink
+    a(href="http://pycon.mediapark.pro")
+      | pycon.mediapark.pro
+

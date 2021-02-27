@@ -1,13 +1,4 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/sass/base.sass":
@@ -16,7 +7,10 @@
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://cdarr/./src/sass/base.sass?");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -26,17 +20,85 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://cdarr/./src/sass/project.sass?");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "./src/js/main.js":
+/*!************************!*\
+  !*** ./src/js/main.js ***!
+  \************************/
+/***/ (() => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_base_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/base.sass */ \"./src/sass/base.sass\");\n/* harmony import */ var _sass_project_sass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sass/project.sass */ \"./src/sass/project.sass\");\n\r\n\n\n//# sourceURL=webpack://cdarr/./src/app.js?");
+let good_color = "40AA3B"
+let bad_color = "#DD0000"
+
+function set_verdict_description(verdict) {
+  let id = verdict.id
+  verdict = document.getElementById(id)
+
+  let description = document.getElementById("verdict-description")
+
+  switch (verdict.id) {
+    case "verdict-ok": {
+        description.innerHTML = "Все тесты пройдены, решение верное."
+        verdict.style.color = good_color
+        
+        break
+      }
+    case "verdict-wa": {
+        description.innerHTML = "Выходные данные программы не совпадают с правильным ответом."
+        verdict.style.color = bad_color
+
+        break
+      }
+    case "verdict-re": {
+        description.innerHTML = "Исполняемая программа завершилась с ошибкой."
+        verdict.style.color = bad_color
+
+        break
+      }
+    case "verdict-tl": {
+        description.innerHTML = "Превышен заданный для задачи лимит времени."
+        verdict.style.color = bad_color
+
+        break
+      }
+    case "verdict-ce": {
+        description.innerHTML = "Произошла ошибка во время компиляции."
+        verdict.style.color = bad_color
+
+        break
+      }
+    case "verdict-ml": {
+        description.innerHTML = "Превышен заданный для задачи лимит памяти."
+        verdict.style.color = bad_color
+
+        break
+      }
+    case "verdict-te": {
+        description.innerHTML = "Произошла ошибка на стороне сервера, решение не удалось проверить."
+        verdict.style.color = bad_color
+
+        break 
+      }
+  }
+
+}
+
+function clear_description(verdict) {
+  let id = verdict.id
+  verdict = document.getElementById(id)
+
+  verdict.style.color = "#f1f1f1"
+}
+
+window.set_verdict_description = set_verdict_description
+window.clear_description = clear_description
+
 
 /***/ })
 
@@ -66,6 +128,35 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sas
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -78,11 +169,22 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sas
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/app.js");
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/*!********************!*\
+  !*** ./src/app.js ***!
+  \********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _sass_base_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/base.sass */ "./src/sass/base.sass");
+/* harmony import */ var _sass_project_sass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sass/project.sass */ "./src/sass/project.sass");
+/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/main.js */ "./src/js/main.js");
+/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_main_js__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+})();
+
 /******/ })()
 ;

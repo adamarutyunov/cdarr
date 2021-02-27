@@ -1,3 +1,7 @@
+$right-gradient: linear-gradient(to right, #c7100c 0%, #b41020 7%, #6e1d53 43%, #3b2678 81%, #3f00be 100%);
+$light-grey: #f1f1f1
+    
+
 .fline
     display: flex
 
@@ -9,8 +13,25 @@
         align-items: center
         flex: 1 auto
 
-        & svg 
+        & svg
             vertical-align: center
+
+
+.headerlike div
+    display: flex
+    align-items: center
+    height: 140px
+    margin: 30px 30px
+
+    & img
+        height: 100%
+        width: auto
+    
+    & .right
+        margin: 0 50px 0 auto
+
+    & h6
+        margin: 0 50px
 
 
 .svg
@@ -55,12 +76,17 @@
         margin: 0 30px 0 10px
         padding: 35px 50px
 
-    & .description
-        display: flex
-        flex-direction: column
+.description
+    display: flex
+    flex-direction: column
 
-        flex: 1 auto
-        padding: 35px 50px
+    min-width: 450px
+
+    flex: 1 auto
+    padding: 35px 50px
+
+    & span.big
+        margin-bottom: 20px
 
 
 .alpha
@@ -71,6 +97,70 @@
     border-radius: 10px
 
 
+.shadowed
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.15)
+
 .mail
-    width: 800px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    padding: 0 50px
+    padding-bottom: 25px
+    width: min-content
     margin: 50px 0
+
+    border: 17px solid transparent
+    border-image: $right-gradient
+    border-image-slice: 1
+    
+    font-size: 110pt
+    font-variation-settings: "wght" 700
+
+.mail-small
+    font-size: 60pt
+    margin-bottom: 15px
+    font-variation-settings: "wght" 750
+
+span.gradient
+    background: $right-gradient
+    color: transparent
+    -webkit-background-clip: text
+
+
+.half
+    width: 50%
+
+.halfquarter
+    width: 75%
+
+
+.actionlink
+    border-radius: 10px
+    display: inline-block
+    width: min-content
+    padding: 10px 30px 20px 30px
+    font-size: 25pt
+    background-color: $light-grey
+
+
+.verdicts
+    display: flex
+    flex-direction: row
+    justify-content: left
+
+    & .verdict
+        font-size: 50pt
+        color: $light-grey
+        font-variation-settings: "wght" 650
+        margin-right: .3em
+
+
+#verdict-description
+    display: block
+    min-height: 50px
+    margin-top: 10px
+    margin-bottom: 20px
+    font-variation-settings: "wght" 650
+
+    

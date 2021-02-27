@@ -5,9 +5,8 @@ $hover-color: #0082ff
     margin: 0
     position: relative
 
-
 html
-    overflow-x: hidden
+    height: 100%
 
 
 @font-face
@@ -16,39 +15,58 @@ html
     font-weight: normal
     font-style: normal
 
-header
-    display: block
+
+header.big
     margin: 10px 75px
     height: 615px
+
+
+footer
+    width: 100%
+    position: absolute
+    bottom: 0   
 
 
 body
     background-color: white
     font-family: 'GolosTextVF'
     font-weight: normal
-    font-variation-settings: "wght" 430
-    font-size: 25pt
+    font-variation-settings: "wght" 300
+    font-size: 16pt
+    min-height: 100%
 
 img
     width: 100%
 
+
 h1
     font-variation-settings: "wght" 650
-    font-size: 175pt;
+    font-size: 175pt
 
 h2
     font-variation-settings: "wght" 500
     font-weight: normal
-    font-size: 90pt;
+    font-size: 90pt
 
 h3
+    font-variation-settings: "wght" 450
+    font-weight: normal
+    font-size: 105pt
+
+h5
     font-variation-settings: "wght" 300
     font-weight: normal
-    font-size: 45pt;
+    font-size: 45pt
+
+h6
+    font-variation-settings: "wght" 600
+    font-weight: normal
+    font-size: 45pt
+
 
 a
     text-decoration: none
-    border-bottom: 3px solid black
+    border-bottom: .08em solid black
     color: black
 
     &:hover
@@ -61,11 +79,26 @@ a
     &.implicit
         border: none
 
-p
-    margin-top: 20px
+        &:hover
+            color: black !important
+
+.big
+    font-size: 23pt
+
+
+p 
+    margin: 1em 0
+
 
 #main
-    margin: 80px 75px 100px 75px
+    margin: 0 75px
+    padding-bottom: 100px
+
+
+#project
+    margin: 0 150px 300px 150px
+    padding-bottom: 300px
+    width: 75%
 
 
 sspace
