@@ -200,6 +200,7 @@ xspace {
 span.gradient {
   background: linear-gradient(to right, #c7100c 0%, #b41020 7%, #6e1d53 43%, #3b2678 81%, #3f00be 100%);
   color: transparent;
+  background-clip: text;
   -webkit-background-clip: text; }
 
 .half {
@@ -217,10 +218,9 @@ span.gradient {
   background-color: #f1f1f1; }
 
 .verdicts {
-  display: flex;
-  flex-direction: row;
-  justify-content: left; }
+  display: block; }
   .verdicts .verdict {
+    display: inline-block;
     font-size: 50pt;
     color: #f1f1f1;
     font-variation-settings: "wght" 650;
@@ -232,4 +232,52 @@ span.gradient {
   margin-top: 10px;
   margin-bottom: 20px;
   font-variation-settings: "wght" 650; }
+
+.protocol-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 400px; }
+
+#protocol-code {
+  border-radius: 15px;
+  background-color: #464646;
+  color: #3fbfd8;
+  font-family: "PT Mono";
+  font-weight: bold;
+  padding: 35px;
+  min-width: 500px;
+  font-size: 21pt; }
+
+#protocol-menu {
+  width: 600px; }
+  #protocol-menu span {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 25px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 18pt;
+    color: #cccbcb; }
+    #protocol-menu span.active {
+      color: black;
+      cursor: default; }
+
+#protocol-description {
+  font-variation-settings: "wght" 650;
+  padding: 10px 0px 10px 70px; }
+
+.qladmin-row-row {
+  display: flex;
+  justify-content: left;
+  align-items: center; }
+  .qladmin-row-row div {
+    margin-right: 30px; }
+
+.qladmin-column-row {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start; }
+  .qladmin-column-row div {
+    margin-right: 30px; }
 

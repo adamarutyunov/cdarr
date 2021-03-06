@@ -23,6 +23,18 @@ app.get('/chekker', (req, res) => {
     res.render('chekker', {title: "Chekker"});
 })
 
+app.get('/chatile', (req, res) => {
+    res.render('chatile', {title: "Chatile"});
+})
+
+app.get('/qladmin', (req, res) => {
+    res.render('qladmin', {title: "QLAdmin"});
+})
+
+app.get('/kfssr', (req, res) => {
+    res.send('Слава Карелии!')
+})
+
 
 if (DEBUG) {
     var server = http.createServer(app)

@@ -1,0 +1,91 @@
+extends header.pug
+
+block project
+  h3
+    | QLAdmin
+
+  p.big.
+    У всех админок баз данных есть проблема — разработчики делают её
+    максимально универсальной, и поэтому в интерфейсе оказывается
+    очень много продвинутых функций, которые практически никогда не
+    используются. Пользоваться такими приложениями неудобно.
+  p.big.
+    QLAdmin — простая админка для баз данных SQLite3 только с базовыми
+    функциями работы с таблицами.
+
+  mspace
+  img.halfquarter.rounded.shadowed(src="/static/img/qladmin/1.png")
+  mspace
+
+  p.
+    Можно загрузить базу данных или создать новую. В основном окне
+    есть девять функций: коммит — сохранение базы данных, создание,
+    редактирование, переименование, удаление и очистка таблиц,
+    индексация первичных ключей, управление полями таблицы и
+    выполнение кастомного SQL-запроса.
+
+  mspace
+  img.halfquarter.rounded.shadowed(src="/static/img/qladmin/2.png")
+  mspace
+
+  p.
+    Внутри таблицу можно изменять как угодно, как будто это экселевский
+    файл. Если изменение возможно, клетка окрашивается в жёлтый, если
+    произошла ошибка (несоответствие типов, нарушение уникальности
+    поля) — в красный, если изменено на стандартное значение — в серый.
+
+  mspace
+  img.halfquarter.rounded.shadowed(src="/static/img/qladmin/3.png")
+  mspace
+
+  p.
+    Чтобы добавить строку, надо заполнить все обязательные поля,
+    а остальные можно оставить пустыми, и тогда в них запишутся
+    стандартные значения поля.
+
+  mspace
+
+  div.qladmin-row-row
+    div
+      img.rounded.shadowed(src="/static/img/qladmin/4.png")
+    div
+      img.rounded.shadowed(src="/static/img/qladmin/5.png")
+    
+  mspace
+
+  p.
+    Менеджер полей позволяет добавлять поля. Точнее, он должен уметь
+    ещё их редактировать и удалять, и такая функция заложена в 
+    QLAdmin, но сама SQLite3 не поддерживает изменение столбцов.
+
+  mspace
+
+  div.qladmin-column-row
+    div
+      img.rounded.shadowed(src="/static/img/qladmin/6.png")
+    div
+      img.rounded.shadowed(src="/static/img/qladmin/7.png")
+
+  mspace
+
+  p.
+    В меню коммитов отображаются все изменения, которые
+    сохранятся при коммите.
+
+  mspace
+
+  
+  img.half.rounded.shadowed(src="/static/img/qladmin/8.png")
+  
+  mspace
+
+  p.
+    Я пользовался QLAdmin до тех пор, пока не понадобились более
+    продвинутые функций типа связей, вплоть до ORM.
+ 
+  sspace
+
+  div.actionlink
+    a(href="https://github.com/AdamArutyunov/QLAdmin")
+      | Гитхаб
+

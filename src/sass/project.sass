@@ -1,6 +1,9 @@
 $right-gradient: linear-gradient(to right, #c7100c 0%, #b41020 7%, #6e1d53 43%, #3b2678 81%, #3f00be 100%);
 $light-grey: #f1f1f1
-    
+$grey: #cccbcb
+$dark-grey: #464646
+$code: #3fbfd8    
+
 
 .fline
     display: flex
@@ -100,6 +103,7 @@ $light-grey: #f1f1f1
 .shadowed
     box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.15)
 
+
 .mail
     display: flex
     align-items: center
@@ -125,11 +129,13 @@ $light-grey: #f1f1f1
 span.gradient
     background: $right-gradient
     color: transparent
+    background-clip: text
     -webkit-background-clip: text
 
 
 .half
     width: 50%
+
 
 .halfquarter
     width: 75%
@@ -145,11 +151,11 @@ span.gradient
 
 
 .verdicts
-    display: flex
-    flex-direction: row
-    justify-content: left
+    display: block
 
     & .verdict
+        display: inline-block
+
         font-size: 50pt
         color: $light-grey
         font-variation-settings: "wght" 650
@@ -163,4 +169,66 @@ span.gradient
     margin-bottom: 20px
     font-variation-settings: "wght" 650
 
-    
+
+.protocol-block
+    display: flex
+    flex-direction: row
+    align-items: center
+
+    height: 400px
+
+
+#protocol-code
+    border-radius: 15px
+    background-color: $dark-grey
+    color: $code
+
+    font-family: "PT Mono"
+    font-weight: bold
+
+    padding: 35px
+    min-width: 500px
+
+    font-size: 21pt
+
+
+#protocol-menu
+    width: 600px
+
+    & span
+        display: inline-block
+        white-space: nowrap
+
+        margin-right: 25px
+        margin-bottom: 8px
+        cursor: pointer
+
+        font-size: 18pt
+        color: $grey
+
+        &.active
+            color: black
+            cursor: default
+
+
+#protocol-description
+    font-variation-settings: "wght" 650
+    padding: 10px 0px 10px 70px
+
+
+.qladmin-row-row
+    display: flex
+    justify-content: left
+    align-items: center
+
+    & div
+        margin-right: 30px
+
+
+.qladmin-column-row
+    display: flex
+    justify-content: left
+    align-items: flex-start
+
+    & div
+        margin-right: 30px
