@@ -1,0 +1,174 @@
+extends header.pug
+
+block project
+  h3
+    | Untitled
+
+  p.big.
+    Untitled — самая каноничная 2D RPG, которую можно вообще себе представить. Больше и сказать-то нечего!
+
+  mspace
+  video.halfquarter.rounded.shadowed(src="/static/img/untitled/walkthrough.mp4", autoplay, loop, muted)
+  lspace
+
+  p.
+    В Untitled есть оружие:
+
+  mspace
+
+  div.untitled-weapons
+    div.weapon#short-sword
+      img(src="/static/img/untitled/short_sword.png")
+      p.label
+       | Короткий меч
+    div.weapon#long-sword
+      img(src="/static/img/untitled/long_sword.png")
+      p.label
+       | Длинный меч
+    div.weapon#hard-sword
+      img(src="/static/img/untitled/hard_sword.png")
+      p.label
+       | Стальной меч
+
+  lspace
+
+  p.
+    Магические шары:
+
+  mspace
+
+  div.untitled-balls
+    div.ball#fireball
+      img(src="/static/img/untitled/fireball.png")
+      p.label
+       | Огненный шар
+    div.ball#frozenball
+      img(src="/static/img/untitled/frozenball.png")
+      p.label
+       | Ледяной шар
+    div.ball#magicball
+      img(src="/static/img/untitled/magicball.png")
+      p.label
+       | Магический шар
+
+  lspace
+
+  p.
+    Зелья:
+
+  mspace
+
+  div.untitled-potions
+    div.potion#health-up
+      img(src="/static/img/untitled/health_up_potion.png")
+      p.label
+       | Здоровье
+    div.potion#intelligence-up
+      img(src="/static/img/untitled/intelligence_up_potion.png")
+      p.label
+       | Интеллект
+    div.potion#magic-up
+      img(src="/static/img/untitled/magic_up_potion.png")
+      p.label
+       | Магия
+    div.potion#speed-up
+      img(src="/static/img/untitled/speed_up_potion.png")
+      p.label
+       | Скорость
+    div.potion#strength-up
+      img(src="/static/img/untitled/strength_up_potion.png")
+      p.label
+       | Сила
+
+  lspace
+
+  p.
+    Зомбаки:
+
+  mspace
+
+  div.untitled-zombies
+    div.zombie#down
+      img(src="/static/img/untitled/zombie_down.png")
+      p.label
+       | Зомбак №1
+    div.zombie#right
+      img(src="/static/img/untitled/zombie_right.png")
+      p.label
+       | Зомбак №2
+    div.zombie#up
+      img(src="/static/img/untitled/zombie_up.png")
+      p.label
+       | Зомбак №3
+    div.zombie#left
+      img(src="/static/img/untitled/zombie_left.png")
+      p.label
+       | Зомбак №4
+ 
+  lspace
+
+  p.
+    Горящие и искажённые чуваки:
+
+  mspace
+
+  div.untitled-men
+    div.man#burning-man
+      img(src="/static/img/untitled/burning_man.png")
+      p.label
+       | Горящий чувак
+    div.man#burning-man-dark
+      img(src="/static/img/untitled/burning_man_dark.png")
+      p.label
+       | Тёмный горящий<br>чувак
+    div.man#distorted-man
+      img(src="/static/img/untitled/distorted_man.png")
+      p.label
+       | Искажённый чувак
+    div.man#grey-distorted-man
+      img(src="/static/img/untitled/grey_distorted_man.png")
+      p.label
+       | Серый искажённый<br>чувак
+
+  lspace
+
+  p.
+    Главный и пасхальный персонажи:
+
+  mspace
+
+  div.untitled-players
+    div.player#main-player
+      img(src="/static/img/untitled/player_down.png")
+      p.label
+       | Протагонист
+    div.player#sola
+      img(src="/static/img/untitled/sola_down.png")
+      p.label
+       | Сола
+
+  lspace
+
+  p.
+    Главный босс:
+
+  mspace
+
+  div.untitled-violet-eye
+    img(src="/static/img/untitled/violet_eye.png")
+
+  lspace
+
+  p.
+    Можно посмотреть и поиграть.
+
+  sspace
+
+  div.actionlinks
+    div.actionlink
+      a(href="/static/img/untitled/UntitledWalkthrough.mp4")
+        | Прохождение
+    div.actionlink
+      a(href="https://github.com/AdamArutyunov/Untitled")
+        | Гитхаб
+

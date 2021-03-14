@@ -12,23 +12,67 @@ verdicts = {"verdict-ok": ["Все тесты пройдены, решение �
 }
 
 packets = {
-  "packet-register": [
-    "<p>Запрос на регистрацию от клиента серверу. Содержит имя, логин и пароль.</p><p>Возвращает токен, если регистрация прошла успешно, или пакет с ошибкой.</p>",
+  "packet-register": 
 `{
   'header': 'register',
   'body': {
     'name': &lt;str&gt;,
     'login': &lt;str&gt;,
-    'password': &lt;str&gt;,
+    'password': &lt;str&gt;
   }
-}`],
-  "packet-login": [
-    "<p>Запрос авторизации клиента. Содержит логин и пароль. Возвращает токен или сообщение об ошибке.</p>",
+}`,
+  "packet-login":
 `{
   'header': 'login',
   'body': {
-     'login': <str>,
-     'password': <str>
+     'login': &lt;str&gt;,
+     'password': &lt;str&gt;
   }
-}`]
+}`,
+  "packet-send-message": 
+`{
+  'header': 'send_message',
+  'body': {
+     'token': &lt;str&gt;,
+     'data': &lt;str&gt;,
+     'recipient_login': &lt;str&gt;
+  }
+}`,
+  "packet-get-messages": 
+`{
+  'header': 'get_messages',
+  'body': {
+     'token': &lt;str&gt;,
+     'login': &lt;str&gt;
+  }
+}`,
+  "packet-error": 
+`{
+  'header': 'error',
+  'body': {
+     'code': &lt;int&gt;,
+     'message': &lt;str&gt;
+  }
+}`,
+  "packet-ok": 
+`{
+  'header': 'ok'
+}`,
+  "packet-auth": 
+`{
+  'header': 'auth',
+  'body': {
+     'token': &lt;str&gt;
+  }
+}`,
+  "packet-message": 
+`{
+  'header': 'message',
+  'body': {
+      'sender_login': &lt;str&gt;,
+      'recipient_login': &lt;str&gt;,
+      'data': &lt;str&gt;,
+      'sending_date': &lt;int&gt;
+  }
+}`
 }

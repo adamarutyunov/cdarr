@@ -6,9 +6,8 @@ block project
 
   p.big.
     Удивительно, но ещё нет ни одного консольного чата, развитого
-    так же, как хотя бы один из GUI-шных. Таким чатом было бы удобно
-    пользоваться администраторам в локальной сети, и его можно
-    внедрять как корпоративный чат, чтобы не использовать
+    так же, как любой чат с графическим интерфейсом. Такое приложение было бы удобно
+    использовать как корпоративное средство общения администраторов, чтобы не пользоваться
     устаревшие консольные утилиты.
   p.big.
     Встречайте, Chatile!
@@ -21,63 +20,55 @@ block project
     Чатиль имеет клиент-серверную архитектуру с базой данных и работает
     на чистых сокетах. Чтобы стандартизировать структуру пакетов, мы
     разработали <i>Mail Transfer Protocol</i> специально для проекта. Вот как
-    выглядят его основные пакеты:
+    выглядят его основные сообщения:
 
-  mspace
+  a(href="#skip").big
+    | Чё-то сложно, давайте дальше
+
+  lspace
 
   div.protocol-block
     div#protocol-code
-      pre.
-        {
-          'header': 'register',
-          'body': {
-            'name': &lt;str&gt;,
-            'login': &lt;str&gt;,
-            'password': &lt;str&gt;
+      div#protocol-inner-code
+        pre.
+          {
+            'header': 'register',
+            'body': {
+              'name': &lt;str&gt;,
+              'login': &lt;str&gt;,
+              'password': &lt;str&gt;
+            }
           }
-        }
 
-    div#protocol-description.big
-      p.
-        Запрос на регистрацию от
-        клиента серверу. Содержит
-        имя, логин и пароль.
-      p.
-        Возвращает токен, если
-        регистрация прошла успешно,
-        или пакет с ошибкой.
-
-  mspace
-
-  div#protocol-menu
-    span.active#packet-register(onclick="set_packet_description(this)")
-      | Регистрация
-    span#packet-login(onclick="set_packet_description(this)")
-      | Логин
-    span#packet-send-message(onclick="set_packet_description(this)")
-      | Отправка сообщения
-    span#packet-auth(onclick="set_packet_description(this)")
-      | Успешная авторизация
-    span#packet-message(onclick="set_packet_description(this)")
-      | Доставка сообщения
-    span#packet-message-history(onclick="set_packet_description(this)")
-      | История сообщения
-    span#packet-error(onclick="set_packet_description(this)")
-      | Ошибка
-    span#packet-ok(onclick="set_packet_description(this)")
-      | ОК
+    div#protocol-menu
+      span.active#packet-register(onclick="set_packet_description(this)")
+        | Регистрация
+      span#packet-login(onclick="set_packet_description(this)")
+        | Логин
+      span#packet-send-message(onclick="set_packet_description(this)")
+        | Отправка сообщения
+      span#packet-auth(onclick="set_packet_description(this)")
+        | Успешная авторизация
+      span#packet-message(onclick="set_packet_description(this)")
+        | Доставка сообщения
+      span#packet-get-messages(onclick="set_packet_description(this)")
+        | История сообщений
+      span#packet-error(onclick="set_packet_description(this)")
+        | Ошибка
+      span#packet-ok(onclick="set_packet_description(this)")
+        | ОК
 
   mspace
 
-  p.
+  p#skip.
     Низкий уровень передачи пакетов снижает требования к
     сети, а отсутствие графического интерфейса — к железу сервера.
   p.
-    База данных позволяет как вести переписку в реальном времени,
-    так и накапливать сообщения от одного пользователя, чтобы
-    передать их второму, когда он появится в сети. Большинство
-    текущих чатов умеют только соединять клиенты друг с другом
-    одновременно. В реальности такой чат использовать не получится.
+    База данных нужна, для того чтобы можно было как вести переписку в реальном времени,
+    так и накапливать сообщения от отправителя, чтобы
+    передать их получателю, когда тот появится в сети. Большинство
+    существующих чатов умеют соединять клиенты друг с другом
+    только одновременно.
 
   mspace
   img.rounded.shadowed(src="/static/img/chatile/2.png")
@@ -86,17 +77,16 @@ block project
   p.
     Чтобы начать общение, нужно зарегистрироваться. После этого
     пользователь добавляется в общую базу данных. Теперь с ним
-    может связаться любой другой пользователь — не нужно
-    специально начинать с кем-то чат.
+    может связаться любой другой пользователь по уникальному логину.
 
   mspace
   img.rounded.shadowed(src="/static/img/chatile/3.png")
   mspace
 
   p.
-    Авторизацию по логину и паролю можно пройти всего один раз, и
+    Войти в систему по логину и паролю можно всего один раз, и
     после этого клиент получает токен на час, который позволяет
-    совершать любые действия без дальнейшей авторизации.
+    совершать любые действия без повторной аутентификации.
 
   mspace
   img.rounded.shadowed(src="/static/img/chatile/4.png")
@@ -114,8 +104,8 @@ block project
     для хакатона <a href="https://vk.com/devhack2020">DevHack 2020</a> в Ростове-на-Дону. Чатиль стал
     лучшим решением этой задачи.
   p.
-    Сейчас разрабатывается новый клиент на Go и новые функции типа
-    статуса онлайна, списка контактов и многопользовательских чатов.
+    Сейчас мы делаем новый клиент на Go и расширяем функциональность:
+    поддержку статуса онлайна, списка контактов и многопользовательских чатов.
   p.
     Сервер — я, клиент — <a href="https://github.com/stepan-neretin7">Степан</a>, протокол — <a href="https://codeforces.com/profile/Renedyn">Глеб</a>.
 

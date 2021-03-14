@@ -31,6 +31,10 @@ app.get('/qladmin', (req, res) => {
     res.render('qladmin', {title: "QLAdmin"});
 })
 
+app.get('/untitled', (req, res) => {
+    res.render('untitled', {title: "Untitled"});
+})
+
 app.get('/kfssr', (req, res) => {
     res.send('Слава Карелии!')
 })

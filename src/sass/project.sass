@@ -140,12 +140,17 @@ span.gradient
 .halfquarter
     width: 75%
 
+.actionlinks
+    display: flex
+    flex-direction: row
+
 
 .actionlink
     border-radius: 10px
     display: inline-block
     width: min-content
     padding: 10px 30px 20px 30px
+    margin-right: 20px
     font-size: 25pt
     background-color: $light-grey
 
@@ -172,10 +177,8 @@ span.gradient
 
 .protocol-block
     display: flex
-    flex-direction: row
-    align-items: center
-
-    height: 400px
+    flex-direction: column-reverse
+    align-items: start
 
 
 #protocol-code
@@ -187,7 +190,13 @@ span.gradient
     font-weight: bold
 
     padding: 35px
-    min-width: 500px
+    width: 500px
+    margin-top: 25px
+
+    overflow: hidden
+    height: 250px
+
+    transition: all 100ms
 
     font-size: 21pt
 
@@ -211,9 +220,9 @@ span.gradient
             cursor: default
 
 
-#protocol-description
-    font-variation-settings: "wght" 650
-    padding: 10px 0px 10px 70px
+.label
+    font-size: 18pt
+    color: $grey
 
 
 .qladmin-row-row
@@ -232,3 +241,98 @@ span.gradient
 
     & div
         margin-right: 30px
+
+
+.untitled-weapons
+    display: flex
+    flex-direction: row
+    align-items: top
+
+    & .weapon
+        margin-right: 75px
+
+        & img
+            margin-bottom: 15px
+            height: 250px
+            width: auto
+
+
+.untitled-balls
+    display: flex
+    flex-direction: row
+
+    width: 85%
+
+    & .ball
+        margin-right: 150px
+
+        & img
+            margin-bottom: 15px
+            height: 250px
+            width: auto
+
+            transform: rotate(-90deg)
+
+
+.untitled-potions
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    & .potion
+        & img
+            margin-bottom: 15px
+
+        & p
+            text-align: center
+
+
+.untitled-zombies
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    & .zombie
+        &#up,&#down
+            text-align: center
+        
+        &#left
+            text-align: right
+
+        & img
+            margin-bottom: 15px
+            height: 350px
+            width: auto
+
+
+.untitled-men
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    & .man
+        text-align: center
+
+        & img
+            margin-bottom: 15px
+            height: 350px
+            width: auto
+
+
+.untitled-players
+    display: flex
+    flex-direction: row
+    justify-content: start
+
+    & .player
+        text-align: center
+        margin-right: 150px
+
+        & img
+            margin-bottom: 15px
+            height: 300px
+            width: auto
+
+
+.untitled-violet-eye
+    max-width: 500px

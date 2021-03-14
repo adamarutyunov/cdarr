@@ -209,11 +209,16 @@ span.gradient {
 .halfquarter {
   width: 75%; }
 
+.actionlinks {
+  display: flex;
+  flex-direction: row; }
+
 .actionlink {
   border-radius: 10px;
   display: inline-block;
   width: min-content;
   padding: 10px 30px 20px 30px;
+  margin-right: 20px;
   font-size: 25pt;
   background-color: #f1f1f1; }
 
@@ -235,9 +240,8 @@ span.gradient {
 
 .protocol-block {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 400px; }
+  flex-direction: column-reverse;
+  align-items: start; }
 
 #protocol-code {
   border-radius: 15px;
@@ -246,7 +250,11 @@ span.gradient {
   font-family: "PT Mono";
   font-weight: bold;
   padding: 35px;
-  min-width: 500px;
+  width: 500px;
+  margin-top: 25px;
+  overflow: hidden;
+  height: 250px;
+  transition: all 100ms;
   font-size: 21pt; }
 
 #protocol-menu {
@@ -263,9 +271,9 @@ span.gradient {
       color: black;
       cursor: default; }
 
-#protocol-description {
-  font-variation-settings: "wght" 650;
-  padding: 10px 0px 10px 70px; }
+.label {
+  font-size: 18pt;
+  color: #cccbcb; }
 
 .qladmin-row-row {
   display: flex;
@@ -280,4 +288,75 @@ span.gradient {
   align-items: flex-start; }
   .qladmin-column-row div {
     margin-right: 30px; }
+
+.untitled-weapons {
+  display: flex;
+  flex-direction: row;
+  align-items: top; }
+  .untitled-weapons .weapon {
+    margin-right: 75px; }
+    .untitled-weapons .weapon img {
+      margin-bottom: 15px;
+      height: 250px;
+      width: auto; }
+
+.untitled-balls {
+  display: flex;
+  flex-direction: row;
+  width: 85%; }
+  .untitled-balls .ball {
+    margin-right: 150px; }
+    .untitled-balls .ball img {
+      margin-bottom: 15px;
+      height: 250px;
+      width: auto;
+      transform: rotate(-90deg); }
+
+.untitled-potions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .untitled-potions .potion img {
+    margin-bottom: 15px; }
+  .untitled-potions .potion p {
+    text-align: center; }
+
+.untitled-zombies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .untitled-zombies .zombie#up, .untitled-zombies .zombie#down {
+    text-align: center; }
+  .untitled-zombies .zombie#left {
+    text-align: right; }
+  .untitled-zombies .zombie img {
+    margin-bottom: 15px;
+    height: 350px;
+    width: auto; }
+
+.untitled-men {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .untitled-men .man {
+    text-align: center; }
+    .untitled-men .man img {
+      margin-bottom: 15px;
+      height: 350px;
+      width: auto; }
+
+.untitled-players {
+  display: flex;
+  flex-direction: row;
+  justify-content: start; }
+  .untitled-players .player {
+    text-align: center;
+    margin-right: 150px; }
+    .untitled-players .player img {
+      margin-bottom: 15px;
+      height: 300px;
+      width: auto; }
+
+.untitled-violet-eye {
+  max-width: 500px; }
 
