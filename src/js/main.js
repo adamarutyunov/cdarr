@@ -33,7 +33,15 @@ function clear_packet_description() {
 }
 
 function animate(obj) {
-  obj.src = "/static/img/untitled/burning_man.gif"
+  if (untitled_custom_objects[obj.id] != undefined) {
+    obj.src = `/static/img/untitled/${untitled_custom_objects[obj.id]}`
+    return
+  }
+  obj.src = `/static/img/untitled/${obj.id}.gif`
+}
+
+function stop_animation(obj) {
+  obj.src = `/static/img/untitled/${obj.id}.png`
 }
 
 const anchors = document.querySelectorAll('a[href*="#"]')
@@ -55,3 +63,4 @@ window.set_verdict_description = set_verdict_description
 window.clear_verdict_description = clear_verdict_description
 window.set_packet_description = set_packet_description
 window.animate = animate
+window.stop_animation = stop_animation

@@ -317,7 +317,8 @@ span.gradient {
   flex-direction: row;
   justify-content: space-between; }
   .untitled-potions .potion img {
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    width: 150px; }
   .untitled-potions .potion p {
     text-align: center; }
 

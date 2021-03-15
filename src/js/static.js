@@ -76,3 +76,11 @@ packets = {
   }
 }`
 }
+
+untitled_custom_objects = {
+  "health-up-potion": "potion-empty.png",
+  "speed-up-potion": "potion-empty.png",
+  "strength-up-potion": "potion-empty.png",
+  "intelligence-up-potion": "potion-empty.png",
+  "magic-up-potion": "potion-empty.png",
+}

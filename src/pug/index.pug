@@ -29,7 +29,6 @@ block content
     h2
       | Адам Арутюнов
 
-  lspace
   mspace
 
   div#main
@@ -41,13 +40,7 @@ block content
       img(src="/static/svg/hexagon.svg")
 
     span.big
-      | Пишу 
-      a.dashed(href="#code")
-        | код
-      |  и 
-      a.dashed(href="#text")
-        | текст
-      | . Живу в Ростове-на-Дону. 
+      | Пишу код и текст. Живу в Ростове-на-Дону. 
       a.dashed(href="#contact")
         |Написать
 
@@ -60,7 +53,6 @@ block content
     +content-block("/static/img/untitled/logo.png", "Untitled", "/untitled", "Самая каноничная РПГ, которую можно себе представить. Характеристики, оружие, магия (и фаерболы, да), эффекты, заклинания, мобы и боссы. Проект Яндекс.Лицея.")
     +content-block("/static/img/qladmin/logo.png", "QLAdmin", "qladmin", "Админка для базы данных SQLite3 на Python и Qt. Использует только базовые функции, поэтому у неё простой интерфейс и низкий порог входа. Проект Яндекс.Лицея.")
 
-    mspace
     #text
 
     +content-block("/static/img/wspectator.png", "Нет, я не псих", "https://t.me/wspectator", "Канал, где я думаю текстом уже два с половиной года. Изначально был про ненависть и рейдж, а потом оказалось, что я, наоборот, всё обожаю. Пишу редко.")
