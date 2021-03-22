@@ -56,18 +56,18 @@ h6 {
   font-weight: normal;
   font-size: 45pt; }
 
-a {
+a, .a {
   text-decoration: none;
   border-bottom: .08em solid black;
   color: black; }
-  a:hover {
+  a:hover, .a:hover {
     color: #0082ff !important;
     border-color: #0082ff !important; }
-  a.dashed {
+  a.dashed, .a.dashed {
     border-bottom: 2px dashed black; }
-  a.implicit {
+  a.implicit, .a.implicit {
     border: none; }
-    a.implicit:hover {
+    a.implicit:hover, .a.implicit:hover {
       color: black !important; }
 
 .big {
@@ -75,15 +75,28 @@ a {
 
 p {
   margin: 1em 0; }
+  p.nomargin {
+    margin: 0;
+    margin-bottom: 1em; }
 
 #main {
   margin: 0 75px;
   padding-bottom: 100px; }
 
 #project {
-  margin: 0 150px 300px 150px;
+  margin: 0 10% 300px 10%;
   padding-bottom: 300px;
-  width: 75%; }
+  width: 75%;
+  min-width: 550px; }
+
+#background {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
 
 sspace {
   display: block;
@@ -102,28 +115,31 @@ xspace {
   height: 100px; }
 
 .fline {
-  display: flex; }
+  display: flex;
+  align-items: center; }
   .fline .me {
-    flex: 0 270px; }
+    flex: 0 170px; }
   .fline .line {
+    height: 35px;
+    margin-left: 8%;
     display: flex;
     align-items: center;
     flex: 1 auto; }
-    .fline .line svg {
-      vertical-align: center; }
 
 .headerlike div {
   display: flex;
   align-items: center;
   height: 140px;
   margin: 30px 30px; }
-  .headerlike div img {
+  .headerlike div .logo-small {
     height: 100%;
     width: auto; }
   .headerlike div .right {
     margin: 0 50px 0 auto; }
   .headerlike div h6 {
     margin: 0 50px; }
+  .headerlike div #name {
+    white-space: nowrap; }
 
 .svg {
   position: absolute;
@@ -135,38 +151,44 @@ xspace {
   width: 655px; }
 
 #oval {
-  top: 170px;
+  top: 785px;
   width: 1100px;
   left: 220px; }
 
 #line {
-  top: 1300px;
+  top: 1915px;
   width: 2000px;
   left: -100px; }
 
 #hexagon {
-  top: 2000px;
+  top: 2515px;
   width: 800px;
   left: 500px; }
 
 .content-block {
   display: flex;
   margin-bottom: 30px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  align-items: stretch; }
   .content-block .project-logo {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex: 0 0 350px;
-    margin: 0 30px 0 10px;
-    padding: 35px 50px; }
+    margin: 0 50px 0 30px;
+    padding: 25px 30px; }
+  .content-block .project-description-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
 
-.description {
+.project-description-wrapper {
   display: flex;
   flex-direction: column;
   min-width: 450px;
   flex: 1 auto;
-  padding: 35px 50px; }
-  .description span.big {
+  padding: 25px 30px; }
+  .project-description-wrapper span.big {
     margin-bottom: 20px; }
 
 .alpha {
@@ -193,8 +215,9 @@ xspace {
   font-variation-settings: "wght" 700; }
 
 .mail-small {
+  display: block;
   font-size: 60pt;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-variation-settings: "wght" 750; }
 
 span.gradient {
@@ -203,13 +226,31 @@ span.gradient {
   background-clip: text;
   -webkit-background-clip: text; }
 
+.project-title {
+  display: flex;
+  align-items: center; }
+
+.external-link {
+  width: 0.7em;
+  margin-left: 15px;
+  margin-top: 0.15em; }
+
 .half {
   width: 50%; }
+  .half.adapted {
+    width: 100% !important;
+    max-width: 560px; }
 
 .halfquarter {
   width: 75%; }
+  .halfquarter.adapted {
+    width: 100% !important;
+    max-width: 850px; }
 
 .actionlinks {
+  width: 100%;
+  max-width: 300px;
+  justify-content: start;
   display: flex;
   flex-direction: row; }
 
@@ -217,15 +258,17 @@ span.gradient {
   border-radius: 10px;
   display: inline-block;
   width: min-content;
-  padding: 10px 30px 20px 30px;
+  padding: 0.3em 0.9em 0.6em 0.9em;
   margin-right: 20px;
   font-size: 25pt;
   background-color: #f1f1f1; }
 
 .verdicts {
-  display: block; }
+  display: flex;
+  flex-wrap: wrap; }
   .verdicts .verdict {
     display: inline-block;
+    height: 1em;
     font-size: 50pt;
     color: #f1f1f1;
     font-variation-settings: "wght" 650;
@@ -234,9 +277,12 @@ span.gradient {
 #verdict-description {
   display: block;
   min-height: 50px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
   font-variation-settings: "wght" 650; }
+
+#verdict-wrapper {
+  height: 2.5em; }
 
 .protocol-block {
   display: flex;
@@ -292,25 +338,25 @@ span.gradient {
 .untitled-weapons {
   display: flex;
   flex-direction: row;
-  align-items: top; }
-  .untitled-weapons .weapon {
-    margin-right: 75px; }
-    .untitled-weapons .weapon img {
-      margin-bottom: 15px;
-      height: 250px;
-      width: auto; }
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px; }
+  .untitled-weapons .weapon img {
+    margin-bottom: 15px;
+    height: 250px;
+    width: auto; }
 
 .untitled-balls {
   display: flex;
   flex-direction: row;
-  width: 85%; }
-  .untitled-balls .ball {
-    margin-right: 150px; }
-    .untitled-balls .ball img {
-      margin-bottom: 15px;
-      height: 250px;
-      width: auto;
-      transform: rotate(-90deg); }
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px; }
+  .untitled-balls .ball img {
+    margin-bottom: 15px;
+    height: 250px;
+    width: auto;
+    transform: rotate(-90deg); }
 
 .untitled-potions {
   display: flex;
@@ -349,10 +395,11 @@ span.gradient {
 .untitled-players {
   display: flex;
   flex-direction: row;
-  justify-content: start; }
+  justify-content: space-between;
+  max-width: 500px; }
   .untitled-players .player {
     text-align: center;
-    margin-right: 150px; }
+    margin-right: 10px; }
     .untitled-players .player img {
       margin-bottom: 15px;
       height: 300px;
@@ -360,4 +407,71 @@ span.gradient {
 
 .untitled-violet-eye {
   max-width: 500px; }
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 300pt; }
+  h2 {
+    font-size: 130pt;
+    margin-top: -50px;
+    line-height: 1; }
+  h3 {
+    font-size: 150pt; }
+  header.big {
+    height: 1050px; }
+  #logo {
+    left: -150px;
+    top: -100px;
+    width: 1100px; }
+  .fline .line {
+    height: 50px; }
+  #background {
+    display: none; }
+  header div {
+    justify-content: start; }
+    header div .right {
+      display: none; }
+    header div h6 {
+      margin: none;
+      font-size: 300%; }
+  #project {
+    margin: 0 5%;
+    width: auto; }
+  .logo-small {
+    width: 40%; }
+  .untitled-violet-eye {
+    max-width: 100%; }
+  .untitled-players {
+    max-width: 100%;
+    justify-content: space-around; }
+    .untitled-players div img {
+      height: 500px !important; }
+  .big {
+    font-size: 35pt; }
+  h5.project-title {
+    font-size: 75pt;
+    margin-bottom: 30px; }
+  .content-block {
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 170px;
+    margin-top: 100px; }
+    .content-block .project-logo {
+      padding: 0;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 65px; }
+    .content-block .project-description-wrapper {
+      padding: 0; }
+  .verdicts .verdict {
+    font-size: 80pt !important; }
+  #verdict-description {
+    font-size: 50pt;
+    line-height: 1; }
+  #verdict-wrapper {
+    height: 350px; }
+  .actionlink {
+    font-size: 40pt; }
+  video {
+    width: 100% !important; } }
 

@@ -1,4 +1,4 @@
-$right-gradient: linear-gradient(to right, #c7100c 0%, #b41020 7%, #6e1d53 43%, #3b2678 81%, #3f00be 100%);
+$right-gradient: linear-gradient(to right, #c7100c 0%, #b41020 7%, #6e1d53 43%, #3b2678 81%, #3f00be 100%)
 $light-grey: #f1f1f1
 $grey: #cccbcb
 $dark-grey: #464646
@@ -7,17 +7,19 @@ $code: #3fbfd8
 
 .fline
     display: flex
+    align-items: center
+
 
     & .me
-        flex: 0 270px
+        flex: 0 170px
 
     & .line
+        height: 35px
+        margin-left: 8%
+
         display: flex
         align-items: center
         flex: 1 auto
-
-        & svg
-            vertical-align: center
 
 
 .headerlike div
@@ -26,7 +28,7 @@ $code: #3fbfd8
     height: 140px
     margin: 30px 30px
 
-    & img
+    & .logo-small
         height: 100%
         width: auto
     
@@ -35,6 +37,9 @@ $code: #3fbfd8
 
     & h6
         margin: 0 50px
+
+    & #name
+        white-space: nowrap
 
 
 .svg
@@ -50,18 +55,18 @@ $code: #3fbfd8
 
 
 #oval
-    top: 170px
+    top: 785px
     width: 1100px
     left: 220px
 
 #line
-    top: 1300px
+    top: 1915px
     width: 2000px
     left: -100px
 
 
 #hexagon
-    top: 2000px
+    top: 2515px
     width: 800px
     left: 500px
 
@@ -71,22 +76,32 @@ $code: #3fbfd8
     margin-bottom: 30px
     margin-top: 30px
 
+    align-items: stretch
+
     & .project-logo
         display: flex
         align-items: center
+        justify-content: center
         flex: 0 0 350px
 
-        margin: 0 30px 0 10px
-        padding: 35px 50px
+        margin: 0 50px 0 30px
+        padding: 25px 30px
 
-.description
+    & .project-description-wrapper
+        display: flex
+        flex-direction: row
+        align-items: center
+
+   
+
+.project-description-wrapper
     display: flex
     flex-direction: column
 
     min-width: 450px
 
     flex: 1 auto
-    padding: 35px 50px
+    padding: 25px 30px
 
     & span.big
         margin-bottom: 20px
@@ -122,8 +137,9 @@ $code: #3fbfd8
     font-variation-settings: "wght" 700
 
 .mail-small
+    display: block
     font-size: 60pt
-    margin-bottom: 15px
+    margin-bottom: 10px
     font-variation-settings: "wght" 750
 
 span.gradient
@@ -133,14 +149,35 @@ span.gradient
     -webkit-background-clip: text
 
 
+.project-title
+    display: flex
+    align-items: center
+
+
+.external-link
+    width: 0.7em
+    margin-left: 15px
+    margin-top: 0.15em
+
+
 .half
     width: 50%
 
+    &.adapted
+        width: 100% !important
+        max-width: 560px
 
 .halfquarter
     width: 75%
 
+    &.adapted
+        width: 100% !important
+        max-width: 850px
+
 .actionlinks
+    width: 100%
+    max-width: 300px
+    justify-content: start
     display: flex
     flex-direction: row
 
@@ -149,17 +186,19 @@ span.gradient
     border-radius: 10px
     display: inline-block
     width: min-content
-    padding: 10px 30px 20px 30px
+    padding: 0.3em 0.9em 0.6em 0.9em
     margin-right: 20px
     font-size: 25pt
     background-color: $light-grey
 
 
 .verdicts
-    display: block
+    display: flex
+    flex-wrap: wrap
 
     & .verdict
         display: inline-block
+        height: 1em
 
         font-size: 50pt
         color: $light-grey
@@ -170,9 +209,12 @@ span.gradient
 #verdict-description
     display: block
     min-height: 50px
-    margin-top: 10px
+    margin-top: 20px
     margin-bottom: 20px
     font-variation-settings: "wght" 650
+
+#verdict-wrapper
+    height: 2.5em
 
 
 .protocol-block
@@ -246,10 +288,11 @@ span.gradient
 .untitled-weapons
     display: flex
     flex-direction: row
-    align-items: top
+    justify-content: space-between
+    width: 100%
+    max-width: 900px
 
     & .weapon
-        margin-right: 75px
 
         & img
             margin-bottom: 15px
@@ -260,12 +303,12 @@ span.gradient
 .untitled-balls
     display: flex
     flex-direction: row
+    justify-content: space-between
 
-    width: 85%
+    width: 100%
+    max-width: 1000px
 
     & .ball
-        margin-right: 150px
-
         & img
             margin-bottom: 15px
             height: 250px
@@ -323,11 +366,12 @@ span.gradient
 .untitled-players
     display: flex
     flex-direction: row
-    justify-content: start
+    justify-content: space-between
+    max-width: 500px
 
     & .player
         text-align: center
-        margin-right: 150px
+        margin-right: 10px
 
         & img
             margin-bottom: 15px
@@ -337,3 +381,97 @@ span.gradient
 
 .untitled-violet-eye
     max-width: 500px
+
+
+@media (max-width: 1000px)
+    h1
+        font-size: 300pt
+
+    h2
+        font-size: 130pt
+        margin-top: -50px
+        line-height: 1
+
+    h3
+        font-size: 150pt
+
+    header.big
+        height: 1050px
+
+    #logo
+        left: -150px
+        top: -100px
+        width: 1100px
+
+    .fline .line
+        height: 50px
+
+    #background
+        display: none
+
+    header div
+        justify-content: start
+
+        .right
+            display: none
+
+        & h6
+            margin: none
+            font-size: 300%
+    
+    #project
+        margin: 0 5%
+        width: auto
+
+    .logo-small
+        width: 40%
+
+    .untitled-violet-eye
+        max-width: 100%
+
+    .untitled-players
+        max-width: 100%
+        justify-content: space-around
+
+        & div img
+            height: 500px !important
+
+    .big
+        font-size: 35pt
+
+    h5.project-title
+        font-size: 75pt
+        margin-bottom: 30px
+    
+    .content-block
+        flex-direction: column
+        align-items: start
+
+        margin-bottom: 170px
+        margin-top: 100px
+
+        & .project-logo
+            padding: 0
+            margin-left: 0
+            margin-right: 0
+            margin-bottom: 65px
+
+        & .project-description-wrapper
+            padding: 0
+
+    .verdicts
+        & .verdict
+            font-size: 80pt !important
+
+    #verdict-description
+        font-size: 50pt
+        line-height: 1
+
+    #verdict-wrapper
+        height: 350px
+
+    .actionlink
+        font-size: 40pt
+
+    video
+        width: 100% !important

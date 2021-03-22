@@ -3,8 +3,8 @@ extends base.pug
 mixin headerlike(name)
   div
     a.implicit(href="/")
-      img(src="/static/svg/circle.svg")
-    h6
+      img.logo-small(src="/static/svg/circle.svg")
+    h6#name
       =name
     div.right
       a.implicit(href="mailto:a@cdarr.ru")

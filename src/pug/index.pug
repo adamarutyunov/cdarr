@@ -1,19 +1,23 @@
 extends base.pug
 
-mixin content-block(logo_url, title, url, description)
-  div.content-block
-    div.project-logo.alpha.rounded
-      img(src=logo_url)
-    div.description.alpha.rounded
-      h5
-        a(href=url)
-          =title
+mixin content-block(logo_url, title, url, description, external=false)
+  a.implicit(href=url)
+    div.content-block
+      div.project-logo.alpha.rounded
+        img(src=logo_url)
+      div.project-description-wrapper.alpha.rounded
+        div.description
+          h5.project-title
+            span.a(href=url)
+              =title
+            if external == true
+              img.external-link(src="/static/img/external_link.png")
 
-      sspace
-      sspace
+          sspace
+          sspace
 
-      span.big
-        =description
+          span.big
+            =description
 
 block content
   header.big
@@ -24,14 +28,14 @@ block content
         h1
           | Я
       div.line
-        svg(width="100%" height="35")
+        svg(width="100%" height="100%")
           rect(fill="#000" width="100%" height="100%")
     h2
       | Адам Арутюнов
 
   mspace
 
-  div#main
+  div#background
     div.svg#oval
       img(src="/static/svg/oval.svg")
     div.svg#line
@@ -39,6 +43,7 @@ block content
     div.svg#hexagon
       img(src="/static/svg/hexagon.svg")
 
+  div#main
     span.big
       | Пишу код и текст. Живу в Ростове-на-Дону. 
       a.dashed(href="#contact")
@@ -55,8 +60,8 @@ block content
 
     #text
 
-    +content-block("/static/img/wspectator.png", "Нет, я не псих", "https://t.me/wspectator", "Канал, где я думаю текстом уже два с половиной года. Изначально был про ненависть и рейдж, а потом оказалось, что я, наоборот, всё обожаю. Пишу редко.")
-    +content-block("/static/img/onedreaming.png", "Сны", "https://t.me/onedreaming", "За полтора года мне приснился сто семьдесят один сон. Я кратко записывал каждый в заметки. Теперь, чтобы не забыть всё, я решил переписать часть из них более подробно. Пишу часто.")
+    +content-block("/static/img/wspectator.png", "Нет, я не псих", "https://t.me/wspectator", "Канал, где я думаю текстом уже два с половиной года. Изначально был про ненависть и рейдж, а потом оказалось, что я, наоборот, всё обожаю. Пишу редко.", true)
+    +content-block("/static/img/onedreaming.png", "Сны", "https://t.me/onedreaming", "За полтора года мне приснился сто семьдесят один сон. Я кратко записывал каждый в заметки. Теперь, чтобы не забыть всё, я решил переписать часть из них более подробно. Пишу часто.", true)
 
     lspace
     #contact

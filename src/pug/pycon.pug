@@ -4,7 +4,7 @@ block project
   h3
     | Пайкон
 
-  p.big.
+  p.big.nomargin.
     В технических университетах существует проблема с проверкой кода.
     Ручная проверка неэффективна и не учитывает все возможные ошибки, но её можно автоматизировать
     с помощью тестов. Существующие платформы
@@ -48,7 +48,10 @@ block project
     div.verdict#verdict-te(onmouseover="set_verdict_description(this)", onmouseout="clear_verdict_description(this)")
       | TE
 
-  span#verdict-description
+  div#verdict-wrapper
+    span#verdict-description
+      span(style="color: #eeeded")
+        |Можно наводить
 
   p.
     Контест — соревнование, в течение которого нужно решить наибольшее количество задач. Контест начинается и заканчивается
