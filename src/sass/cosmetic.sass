@@ -1,0 +1,196 @@
+@import constants.sass
+
+
+.verdicts
+    display: flex
+    flex-wrap: wrap
+
+    & .verdict
+        display: inline-block
+        height: 1em
+
+        font-size: 50pt
+        color: $light-grey
+        font-variation-settings: "wght" 650
+        margin-right: .3em
+
+
+#verdict-description
+    display: block
+    min-height: 50px
+    margin-top: 20px
+    margin-bottom: 20px
+    font-variation-settings: "wght" 650
+
+#verdict-wrapper
+    height: 2.5em
+
+
+.protocol-block
+    display: flex
+    flex-direction: column-reverse
+    align-items: start
+
+
+#protocol-code
+    border-radius: 15px
+    background-color: $dark-grey
+    color: $code
+
+    font-family: "PT Mono"
+    font-weight: bold
+
+    padding: 35px
+    width: 100%
+    max-width: 600px
+
+    box-sizing: border-box
+
+    margin-top: 25px
+
+    overflow: hidden
+    height: 340px
+
+    transition: all 100ms
+
+    font-size: 21pt
+
+
+#protocol-menu
+    width: 600px
+
+    & span
+        display: inline-block
+        white-space: nowrap
+
+        margin-right: 25px
+        margin-bottom: 8px
+        cursor: pointer
+
+        font-size: 18pt
+        color: $grey
+
+        &.active
+            color: black
+            cursor: default
+
+
+.label
+    font-size: 18pt
+    color: $grey
+
+
+.qladmin-row-row
+    display: flex
+    justify-content: left
+    align-items: center
+
+    & div
+        margin-right: 30px
+
+
+.qladmin-column-row
+    display: flex
+    justify-content: left
+    align-items: flex-start
+
+    & div
+        margin-right: 30px
+
+
+.untitled-weapons
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 100%
+    max-width: 900px
+
+    & .weapon
+
+        & img
+            margin-bottom: 15px
+            height: 250px
+            width: auto
+
+
+.untitled-balls
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    width: 100%
+    max-width: 1000px
+
+    & .ball
+        & img
+            margin-bottom: 15px
+            height: 250px
+            width: auto
+
+            transform: rotate(-90deg)
+
+
+.untitled-potions
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    & .potion
+        & img
+            margin-bottom: 15px
+            width: 150px
+
+        & p
+            text-align: center
+
+
+.untitled-zombies
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    & .zombie
+        &#up,&#down
+            text-align: center
+        
+        &#left
+            text-align: right
+
+        & img
+            margin-bottom: 15px
+            height: 350px
+            width: auto
+
+
+.untitled-men
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    & .man
+        text-align: center
+
+        & img
+            margin-bottom: 15px
+            height: 350px
+            width: auto
+
+
+.untitled-players
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    max-width: 500px
+
+    & .player
+        text-align: center
+        margin-right: 10px
+
+        & img
+            margin-bottom: 15px
+            height: 300px
+            width: auto
+
+
+.untitled-violet-eye
+    max-width: 500px

@@ -1,21 +1,22 @@
-$right-gradient: linear-gradient(to right, #c7100c 0%, #b41020 7%, #6e1d53 43%, #3b2678 81%, #3f00be 100%)
-$light-grey: #f1f1f1
-$grey: #cccbcb
-$dark-grey: #464646
-$code: #3fbfd8    
+@import constants.sass
 
-
+ 
 .fline
     display: flex
-    align-items: center
-
+    align-items: flex-start
 
     & .me
+        display: inline
+        margin-top: 30px
         flex: 0 170px
 
+        & h1
+            display: inline
+
     & .line
-        height: 35px
+        height: 1em
         margin-left: 8%
+        margin-top: 4.3em
 
         display: flex
         align-items: center
@@ -124,8 +125,7 @@ $code: #3fbfd8
     align-items: center
     justify-content: center
 
-    padding: 0 50px
-    padding-bottom: 25px
+    padding: 20px 50px
     width: min-content
     margin: 50px 0
 
@@ -151,13 +151,13 @@ span.gradient
 
 .project-title
     display: flex
-    align-items: center
+    align-items: flex-end
 
 
 .external-link
     width: 0.7em
     margin-left: 15px
-    margin-top: 0.15em
+    margin-bottom: 0.32em
 
 
 .half
@@ -192,198 +192,10 @@ span.gradient
     background-color: $light-grey
 
 
-.verdicts
-    display: flex
-    flex-wrap: wrap
-
-    & .verdict
-        display: inline-block
-        height: 1em
-
-        font-size: 50pt
-        color: $light-grey
-        font-variation-settings: "wght" 650
-        margin-right: .3em
-
-
-#verdict-description
-    display: block
-    min-height: 50px
-    margin-top: 20px
-    margin-bottom: 20px
-    font-variation-settings: "wght" 650
-
-#verdict-wrapper
-    height: 2.5em
-
-
-.protocol-block
-    display: flex
-    flex-direction: column-reverse
-    align-items: start
-
-
-#protocol-code
-    border-radius: 15px
-    background-color: $dark-grey
-    color: $code
-
-    font-family: "PT Mono"
-    font-weight: bold
-
-    padding: 35px
-    width: 500px
-    margin-top: 25px
-
-    overflow: hidden
-    height: 250px
-
-    transition: all 100ms
-
-    font-size: 21pt
-
-
-#protocol-menu
-    width: 600px
-
-    & span
-        display: inline-block
-        white-space: nowrap
-
-        margin-right: 25px
-        margin-bottom: 8px
-        cursor: pointer
-
-        font-size: 18pt
-        color: $grey
-
-        &.active
-            color: black
-            cursor: default
-
-
-.label
-    font-size: 18pt
-    color: $grey
-
-
-.qladmin-row-row
-    display: flex
-    justify-content: left
-    align-items: center
-
-    & div
-        margin-right: 30px
-
-
-.qladmin-column-row
-    display: flex
-    justify-content: left
-    align-items: flex-start
-
-    & div
-        margin-right: 30px
-
-
-.untitled-weapons
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    width: 100%
-    max-width: 900px
-
-    & .weapon
-
-        & img
-            margin-bottom: 15px
-            height: 250px
-            width: auto
-
-
-.untitled-balls
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-
-    width: 100%
-    max-width: 1000px
-
-    & .ball
-        & img
-            margin-bottom: 15px
-            height: 250px
-            width: auto
-
-            transform: rotate(-90deg)
-
-
-.untitled-potions
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-
-    & .potion
-        & img
-            margin-bottom: 15px
-            width: 150px
-
-        & p
-            text-align: center
-
-
-.untitled-zombies
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-
-    & .zombie
-        &#up,&#down
-            text-align: center
-        
-        &#left
-            text-align: right
-
-        & img
-            margin-bottom: 15px
-            height: 350px
-            width: auto
-
-
-.untitled-men
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-
-    & .man
-        text-align: center
-
-        & img
-            margin-bottom: 15px
-            height: 350px
-            width: auto
-
-
-.untitled-players
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    max-width: 500px
-
-    & .player
-        text-align: center
-        margin-right: 10px
-
-        & img
-            margin-bottom: 15px
-            height: 300px
-            width: auto
-
-
-.untitled-violet-eye
-    max-width: 500px
-
-
 @media (max-width: 1000px)
+    #main
+        margin: 0 75px
+        
     h1
         font-size: 300pt
 
@@ -406,8 +218,17 @@ span.gradient
     .fline .line
         height: 50px
 
-    #background
-        display: none
+    #protocol-code
+        max-width: none
+        height: 450px
+
+        font-size: 30pt
+
+    #protocol-menu
+        width: 100%
+
+        & span
+            font-size: 25pt
 
     header div
         justify-content: start
@@ -451,13 +272,14 @@ span.gradient
         margin-top: 100px
 
         & .project-logo
-            padding: 0
+            padding: 0 50px 0 0
             margin-left: 0
             margin-right: 0
             margin-bottom: 65px
 
         & .project-description-wrapper
-            padding: 0
+            padding: 50px 50px 50px 0
+            box-sizing: content-box
 
     .verdicts
         & .verdict
@@ -475,3 +297,19 @@ span.gradient
 
     video
         width: 100% !important
+
+    #oval
+        top: 2000px
+        width: 2200px
+        left: 120px
+
+    #line
+        top: 4500px
+        width: 4000px
+        left: -2000px
+
+
+    #hexagon
+        top: 8200px
+        width: 2000px
+        left: 100px

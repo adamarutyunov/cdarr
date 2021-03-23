@@ -22,7 +22,7 @@ function set_packet_description(packet) {
   let inner_code = document.getElementById("protocol-inner-code")
   
   inner_code.innerHTML = "<pre>" + packets[packet_id] + "</pre>"
-  code.style.height = inner_code.clientHeight + "px"
+  code.style.height = (inner_code.clientHeight + 70) + "px"
   
 }
 

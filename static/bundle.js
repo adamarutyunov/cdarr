@@ -14,6 +14,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/sass/cosmetic.sass":
+/*!********************************!*\
+  !*** ./src/sass/cosmetic.sass ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/sass/project.sass":
 /*!*******************************!*\
   !*** ./src/sass/project.sass ***!
@@ -57,7 +70,7 @@ function set_packet_description(packet) {
   let inner_code = document.getElementById("protocol-inner-code")
   
   inner_code.innerHTML = "<pre>" + packets[packet_id] + "</pre>"
-  code.style.height = inner_code.clientHeight + "px"
+  code.style.height = (inner_code.clientHeight + 70) + "px"
   
 }
 
@@ -274,11 +287,14 @@ var __webpack_exports__ = {};
   \********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_base_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/base.sass */ "./src/sass/base.sass");
-/* harmony import */ var _sass_project_sass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sass/project.sass */ "./src/sass/project.sass");
-/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/main.js */ "./src/js/main.js");
-/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_main_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _js_static_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/static.js */ "./src/js/static.js");
-/* harmony import */ var _js_static_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_static_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _sass_cosmetic_sass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sass/cosmetic.sass */ "./src/sass/cosmetic.sass");
+/* harmony import */ var _sass_project_sass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sass/project.sass */ "./src/sass/project.sass");
+/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/main.js */ "./src/js/main.js");
+/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_main_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _js_static_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/static.js */ "./src/js/static.js");
+/* harmony import */ var _js_static_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_static_js__WEBPACK_IMPORTED_MODULE_4__);
+
+
 
 
 
