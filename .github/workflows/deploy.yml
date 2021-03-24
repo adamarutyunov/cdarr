@@ -32,4 +32,8 @@ jobs:
            username: ${{ secrets.CI_USERNAME }}
            password: ${{ secrets.CI_PASSWORD }}
            port: ${{ secrets.PORT }}
-           script: whoami
+           script: "cd $ && touch test"
+
+
+
+
