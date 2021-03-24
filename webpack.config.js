@@ -36,6 +36,5 @@ module.exports = {
       filename: "css/style.css",
     })
   ],
-  watch: true,
   devtool: false
 };
