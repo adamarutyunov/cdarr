@@ -5,13 +5,11 @@
     display: flex
     align-items: flex-start
 
+    height: 270px
+
     & .me
-        display: inline
         margin-top: 30px
         flex: 0 170px
-
-        & h1
-            display: inline
 
     & .line
         height: 1em
@@ -67,9 +65,9 @@
 
 
 #hexagon
-    top: 2515px
+    top: 2400px
     width: 800px
-    left: 500px
+    left: 600px
 
 
 .content-block
@@ -125,7 +123,7 @@
     align-items: center
     justify-content: center
 
-    padding: 20px 50px
+    padding: 20px 50px 10px 50px
     width: min-content
     margin: 50px 0
 
@@ -186,8 +184,8 @@ span.gradient
     border-radius: 10px
     display: inline-block
     width: min-content
-    padding: 0.3em 0.9em 0.6em 0.9em
-    margin-right: 20px
+    padding: 0.45em 0.9em 0.55em 0.9em
+    margin-right: 10px
     font-size: 25pt
     background-color: $light-grey
 
@@ -214,6 +212,9 @@ span.gradient
         left: -150px
         top: -100px
         width: 1100px
+
+    .fline
+        height: 500px
 
     .fline .line
         height: 50px
@@ -269,17 +270,17 @@ span.gradient
         align-items: start
 
         margin-bottom: 170px
-        margin-top: 100px
+        margin-top: 50px
 
         & .project-logo
-            padding: 0 50px 0 0
+            padding: 50px 50px 50px 0
             margin-left: 0
             margin-right: 0
-            margin-bottom: 65px
+            margin-bottom: 15px
 
         & .project-description-wrapper
-            padding: 50px 50px 50px 0
-            box-sizing: content-box
+            padding: 50px
+            margin-left: -50px
 
     .verdicts
         & .verdict
@@ -313,3 +314,8 @@ span.gradient
         top: 8200px
         width: 2000px
         left: 100px
+
+    .mail
+        width: 100%
+        padding: 20px 0 10px 0
+        margin-top: -150px

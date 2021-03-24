@@ -61,8 +61,8 @@ a, .a {
   border-bottom: .08em solid black;
   color: black; }
   a:hover, .a:hover {
-    color: #0082ff !important;
-    border-color: #0082ff !important; }
+    color: #4460ff !important;
+    border-color: #4460ff !important; }
   a.dashed, .a.dashed {
     border-bottom: 2px dashed black; }
   a.implicit, .a.implicit {
@@ -84,7 +84,7 @@ p {
   padding-bottom: 100px; }
 
 #project {
-  margin: 0 10% 300px 10%;
+  margin: 0 10%;
   padding-bottom: 300px;
   width: 75%;
   min-width: 550px; }
@@ -263,13 +263,11 @@ xspace {
 
 .fline {
   display: flex;
-  align-items: flex-start; }
+  align-items: flex-start;
+  height: 270px; }
   .fline .me {
-    display: inline;
     margin-top: 30px;
     flex: 0 170px; }
-    .fline .me h1 {
-      display: inline; }
   .fline .line {
     height: 1em;
     margin-left: 8%;
@@ -313,9 +311,9 @@ xspace {
   left: -100px; }
 
 #hexagon {
-  top: 2515px;
+  top: 2400px;
   width: 800px;
-  left: 500px; }
+  left: 600px; }
 
 .content-block {
   display: flex;
@@ -356,7 +354,7 @@ xspace {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 50px;
+  padding: 20px 50px 10px 50px;
   width: min-content;
   margin: 50px 0;
   border: 17px solid transparent;
@@ -409,8 +407,8 @@ span.gradient {
   border-radius: 10px;
   display: inline-block;
   width: min-content;
-  padding: 0.3em 0.9em 0.6em 0.9em;
-  margin-right: 20px;
+  padding: 0.45em 0.9em 0.55em 0.9em;
+  margin-right: 10px;
   font-size: 25pt;
   background-color: #f1f1f1; }
 
@@ -431,6 +429,8 @@ span.gradient {
     left: -150px;
     top: -100px;
     width: 1100px; }
+  .fline {
+    height: 500px; }
   .fline .line {
     height: 50px; }
   #protocol-code {
@@ -469,15 +469,15 @@ span.gradient {
     flex-direction: column;
     align-items: start;
     margin-bottom: 170px;
-    margin-top: 100px; }
+    margin-top: 50px; }
     .content-block .project-logo {
-      padding: 0 50px 0 0;
+      padding: 50px 50px 50px 0;
       margin-left: 0;
       margin-right: 0;
-      margin-bottom: 65px; }
+      margin-bottom: 15px; }
     .content-block .project-description-wrapper {
-      padding: 50px 50px 50px 0;
-      box-sizing: content-box; }
+      padding: 50px;
+      margin-left: -50px; }
   .verdicts .verdict {
     font-size: 80pt !important; }
   #verdict-description {
@@ -500,5 +500,9 @@ span.gradient {
   #hexagon {
     top: 8200px;
     width: 2000px;
-    left: 100px; } }
+    left: 100px; }
+  .mail {
+    width: 100%;
+    padding: 20px 0 10px 0;
+    margin-top: -150px; } }
 
