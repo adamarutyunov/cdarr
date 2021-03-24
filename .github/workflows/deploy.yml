@@ -31,9 +31,5 @@ jobs:
            host: ${{ secrets.CI_HOST }}
            username: ${{ secrets.CI_USERNAME }}
            password: ${{ secrets.CI_PASSWORD }}
-           port: ${{ secrets.PORT }}
+           port: 22
            script: cd $ && touch test
-
-
-
-
