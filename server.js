@@ -2,9 +2,10 @@ const express = require('express')
 const reload = require('reload')
 const http = require('http')
 const app = express()
-const port = 80
 const DEBUG = (process.argv[2] == "-D")
 
+var config = require("./config.json")
+const port = config.port
 
 app.set('views', './src/pug')
 app.set('view engine', 'pug');
