@@ -1,5 +1,7 @@
 extends header.pug
 
+include mixins.pug
+
 block project
   h3
     | QLAdmin
@@ -75,9 +77,9 @@ block project
   
   img.half.adapted.rounded.shadowed(src="/static/img/qladmin/8.png")
   
-  lspace
+  xspace
 
-  div.actionlink
-    a(href="https://github.com/AdamArutyunov/QLAdmin")
-      | Гитхаб
+  .actions
+    +action-telegram
+    +action-project("Pycon", "/static/img/pycon/logo.png", "/pycon")
 

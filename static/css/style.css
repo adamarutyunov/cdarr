@@ -411,6 +411,22 @@ span.gradient {
   font-size: 25pt;
   background-color: #f1f1f1; }
 
+.action-block {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  margin-right: 100px; }
+  .action-block .action-logo {
+    width: 20%;
+    margin-right: 30px; }
+  .action-block .action-description a {
+    font-size: 30pt; }
+
+.actions {
+  display: flex;
+  justify-content: start; }
+
 @media (max-width: 1000px) {
   #main {
     margin: 0 75px; }

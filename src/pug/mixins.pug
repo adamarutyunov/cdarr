@@ -1,0 +1,24 @@
+mixin action-telegram
+    div.action-block
+        div.action-logo
+            a.implicit(href='tg://resolve?domain=wspectator')
+                img(src='/static/img/wspectator.png')
+        div.action-description
+            span
+                | Чтобы читать мысли,<br>подпишитесь на канал
+            br
+            a(href='tg://resolve?domain=wspectator')
+                | Нет, я не псих
+
+
+mixin action-project(title, image_url, project_url)
+    div.action-block
+        div.action-logo
+            a.implicit(href=project_url)
+                img(src=image_url)
+        div.action-description
+            span
+                | Дальше:
+            br
+            a(href=project_url)
+                =title

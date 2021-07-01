@@ -1,5 +1,7 @@
 extends header.pug
 
+include mixins.pug
+
 block project
   h3
     | Chatile
@@ -108,9 +110,9 @@ block project
   p.
     Сервер — я, клиент — <a href="https://github.com/stepan-neretin7">Степан</a>, протокол — <a href="https://codeforces.com/profile/Renedyn">Глеб</a>.
 
-  sspace
+  lspace
 
-  div.actionlink
-    a(href="https://github.com/AdamArutyunov/Chatile")
-      | Гитхаб
+  .actions
+    +action-telegram
+    +action-project("Chekker", "/static/img/chekker/logo.png", "/chekker")
 

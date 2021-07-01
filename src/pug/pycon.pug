@@ -1,5 +1,7 @@
 extends header.pug
 
+include mixins.pug
+
 block project
   h3
     | Пайкон
@@ -79,9 +81,8 @@ block project
       | лучшего&nbsp;IT-проекта
     |  области.
 
-  mspace
+  lspace
 
-  div.actionlink
-    a(href="https://github.com/AdamArutyunov/Pycon")
-      | Гитхаб
-
+  .actions
+    +action-telegram
+    +action-project("Untitled", "/static/img/untitled/logo.png", "/untitled")

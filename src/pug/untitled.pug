@@ -1,5 +1,7 @@
 extends header.pug
 
+include mixins.pug
+
 block project
   h3
     | Untitled
@@ -164,7 +166,7 @@ block project
   lspace
 
   p.
-    Можно посмотреть и поиграть.
+    Можно посмотреть и поиграть. Код — я, текстуры и звуки — <a href='https://github.com/johtai'>johtai</a>.
 
   sspace
 
@@ -172,7 +174,10 @@ block project
     div.actionlink
       a(href="/static/img/untitled/UntitledWalkthrough.mp4")
         | Прохождение
-    div.actionlink
-      a(href="https://github.com/AdamArutyunov/UntitledGame")
-        | Гитхаб
+
+  xspace
+
+  .actions
+    +action-telegram
+    +action-project("Chatile", "/static/img/chatile/logo.png", "/chatile")
 

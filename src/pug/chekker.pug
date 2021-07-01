@@ -1,5 +1,7 @@
 extends header.pug
 
+include mixins.pug
+
 block project
   h3
     | Чеккер
@@ -48,10 +50,9 @@ block project
   p.
     Сейчас Чеккер находится в стадии альфа-тестирования.
 
-  sspace
+  lspace
 
-
-  div.actionlink
-    a(href="http://chekker.cdarr.ru")
-      | chekker.cdarr.ru
+  .actions
+    +action-telegram
+    +action-project("QLAdmin", "/static/img/qladmin/logo.png", "/qladmin")
 
