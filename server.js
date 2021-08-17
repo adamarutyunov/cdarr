@@ -37,7 +37,7 @@ app.get('/untitled', (req, res) => {
 })
 
 app.get('/university', (req, res) => {
-    res.render('pages/university', {title: "Объявление"});
+    res.render('pages/university', {title: "Объявление №1"});
 })
 
 app.get('/kfssr', (req, res) => {
