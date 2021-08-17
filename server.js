@@ -36,6 +36,10 @@ app.get('/untitled', (req, res) => {
     res.render('untitled', {title: "Untitled"});
 })
 
+app.get('/university', (req, res) => {
+    res.render('pages/university', {title: "Объявление"});
+})
+
 app.get('/kfssr', (req, res) => {
     res.send('Слава Карелии!')
 })
