@@ -1,6 +1,6 @@
 extends base.pug
 
-mixin content-block(logo_url, title, url, description, external=false)
+mixin content-block(logo_url, title, url, description, external=false, news=false)
   a.implicit(href=url)
     div.content-block
       div.project-logo.alpha.rounded
@@ -12,6 +12,9 @@ mixin content-block(logo_url, title, url, description, external=false)
               =title
             if external == true
               img.external-link(src="/static/img/external_link.png")
+            if news == true
+              span.new-project
+                | N E W 
 
           sspace
           sspace
@@ -52,12 +55,35 @@ block content
     
     #code
   
-    +content-block("/static/img/circle_negative.png", "Адам Арутюнов поднимается до мидла", "https://t.me/cdarr", "Месяц назад я подумал, что хватит уже быть новичком, и решил подняться до мидла за полгода. Канал в Телеграме про мой прогресс, ну и наблюдения вообще за тем, что творится.", true)
-    +content-block("/static/img/pycon/logo.png", "Пáйкон", "/pycon", "Тестирующая система для решения задач по алгоритмическому программированию. Финальный проект Яндекс.Лицея. Прошёл тестирование на реальных студентах.")
-    +content-block("/static/img/untitled/logo.png", "Untitled", "/untitled", "Самая каноничная RPG, которую можно себе представить. Характеристики, оружие, магия (и фаерболы, да), эффекты, заклинания, мобы и боссы. Проект Яндекс.Лицея.")
-    +content-block("/static/img/chatile/logo.png", "Chatile", "/chatile", "Лёгкий и гибкий консольный чат на чистых сокетах. Нужен для удобного общения без использования графического интерфейса. Подходит для быстрой корпоративной связи. Разработан на DevHack 2020.")
-    +content-block("/static/img/chekker/logo.png", "Чеккер", "/chekker", "Платформа для проверки знаний с помощью тестов. Автономно поддерживается, сильно автоматизирует учебный процесс, легко масштабируется. Проходит альфа-тестирование.")
-    +content-block("/static/img/qladmin/logo.png", "QLAdmin", "qladmin", "Приложение для администрирования баз данных SQLite3 на Python и Qt с базовыми функциями для работы с таблицами, простым интерфейсом и низким порогом входа. Проект Яндекс.Лицея.")
+    +content-block("/static/img/district61/logo.png", 
+        "District 61", 
+        "/district61", 
+        "Геймифицированная система для улучшения благоустройства города — с помощью деления его на нанорайоны и создания между ними конкуренции. Разработана на «Цифровых Инновациях — 2021».",
+        false, true)
+    +content-block("/static/img/circle_negative.png", 
+        "Адам Арутюнов поднимается до мидла", 
+        "https://t.me/cdarr", "Месяц назад я подумал, что хватит уже быть новичком, и решил подняться до мидла за полгода. Канал в Телеграме про мой прогресс, ну и наблюдения вообще за тем, что творится.", 
+        true)
+    +content-block("/static/img/pycon/logo.png", 
+        "Пáйкон", 
+        "/pycon", 
+        "Тестирующая система для решения задач по алгоритмическому программированию. Финальный проект Яндекс.Лицея. Прошёл тестирование на реальных студентах.")
+        +content-block("/static/img/untitled/logo.png", 
+        "Untitled", 
+        "/untitled", 
+        "Самая каноничная RPG, которую можно себе представить. Характеристики, оружие, магия (и фаерболы, да), эффекты, заклинания, мобы и боссы. Проект Яндекс.Лицея.")
+    +content-block("/static/img/chatile/logo.png", 
+        "Chatile", 
+        "/chatile", 
+        "Лёгкий и гибкий консольный чат на чистых сокетах. Нужен для удобного общения без использования графического интерфейса. Подходит для быстрой корпоративной связи. Разработан на DevHack 2020.")
+    +content-block("/static/img/chekker/logo.png", 
+        "Чеккер", 
+        "/chekker", 
+        "Платформа для проверки знаний с помощью тестов. Автономно поддерживается, сильно автоматизирует учебный процесс, легко масштабируется. Проходит альфа-тестирование.")
+    +content-block("/static/img/qladmin/logo.png", 
+        "QLAdmin", 
+        "qladmin", 
+        "Приложение для администрирования баз данных SQLite3 на Python и Qt с базовыми функциями для работы с таблицами, простым интерфейсом и низким порогом входа. Проект Яндекс.Лицея.")
 
     #text
 
