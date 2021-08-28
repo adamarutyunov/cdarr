@@ -376,12 +376,18 @@ span.gradient {
 
 .project-title {
   display: flex;
-  align-items: flex-end; }
+  align-items: center; }
 
 .external-link {
   width: 0.7em;
   margin-left: 15px;
-  margin-bottom: 0.34em; }
+  margin-bottom: 0.13em; }
+
+.new-project {
+  color: #23d800;
+  font-size: 20pt;
+  margin-left: 30px;
+  font-variation-settings: "wght" 100; }
 
 .half {
   width: 50%; }

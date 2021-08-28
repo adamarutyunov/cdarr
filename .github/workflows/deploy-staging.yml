@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: main
+    branches: develop
   pull_request:
-    branches: main
+    branches: develop
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,7 +32,7 @@ jobs:
            username: ${{ secrets.CI_USERNAME }}
            password: ${{ secrets.CI_PASSWORD }}
            port: 22
-           script: cd /home/adam/cdarr && sudo sh deploy.sh
+           script: cd /home/adam/cdarr_staging && sudo sh deploy.sh
 
 
 
