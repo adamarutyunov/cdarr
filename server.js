@@ -36,6 +36,10 @@ app.get('/untitled', (req, res) => {
     res.render('untitled', {title: "Untitled"});
 })
 
+app.get('/district61', (req, res) => {
+    res.render('district61', {title: "District 61"});
+})
+
 app.get('/university', (req, res) => {
     res.render('pages/university', {title: "Объявление №1"});
 })

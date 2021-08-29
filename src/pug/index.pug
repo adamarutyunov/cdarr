@@ -7,7 +7,7 @@ mixin content-block(logo_url, title, url, description, external=false, news=fals
         img(src=logo_url)
       div.project-description-wrapper.alpha.rounded
         div.description
-          h5.project-title
+          h5
             span.a(href=url)
               =title
             if external == true
@@ -55,11 +55,11 @@ block content
     
     #code
   
-    //+content-block("/static/img/district61/logo.png", 
-    //    "District 61", 
-    //    "/district61", 
-    //    "Геймифицированная система для улучшения благоустройства города — с помощью деления его на нанорайоны и создания между ними конкуренции. Разработана на «Цифровых Инновациях — 2021».",
-    //    false, true)
+    +content-block("/static/img/district61/logo.png", 
+        "District 61", 
+        "/district61", 
+        "Геймифицированная система для улучшения благоустройства города — с помощью деления его на нанорайоны и создания между ними конкуренции. Разработана на «Цифровых инновациях — 2021».",
+        false, true)
     +content-block("/static/img/circle_negative.png", 
         "Адам Арутюнов поднимается до мидла", 
         "https://t.me/cdarr", "Месяц назад я подумал, что хватит уже быть новичком, и решил подняться до мидла за полгода. Канал в Телеграме про мой прогресс, ну и наблюдения вообще за тем, что творится.", 
@@ -87,8 +87,14 @@ block content
 
     #text
 
-    +content-block("/static/img/wspectator.png", "Нет, я не псих", "https://t.me/wspectator", "Канал в Телеграме, где я думаю текстом уже три года. Изначально был про ненависть и рейдж, а потом оказалось, что я, наоборот, всё обожаю. Пишу редко.", true)
-    +content-block("/static/img/onedreaming.png", "Сны", "https://t.me/onedreaming", "За полтора года мне приснился сто семьдесят один сон, и каждый из них я кратко записывал в заметки. Чтобы не забыть их полностью, я решил переписать часть снов более подробно. Пишу часто.", true)
+    +content-block("/static/img/wspectator.png", 
+        "Нет, я не псих", "https://t.me/wspectator", 
+        "Канал в Телеграме, где я думаю текстом уже три года. Изначально был про ненависть и рейдж, а потом оказалось, что я, наоборот, всё обожаю. Пишу редко.", 
+        true)
+    +content-block("/static/img/onedreaming.png", 
+        "Сны", "https://t.me/onedreaming", 
+        "За полтора года мне приснился сто семьдесят один сон, и каждый из них я кратко записывал в заметки. Чтобы не забыть их полностью, я решил переписать часть снов более подробно. Пишу часто.", 
+        true)
 
     lspace
     #contact
