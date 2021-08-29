@@ -1,0 +1,85 @@
+extends header.pug
+
+include mixins.pug
+
+block project
+  h3
+    | District 61
+
+  p.big.nomargin.
+    Есть приложения, которые позволяют отправить в городскую администрацию жалобу на проблему городской среды — яма, труба течёт, торчащая из асфальта арматура. Но они не стали популярными — потому что кто знает,
+    повлияет ли жалоба на решение проблемы, да и мотивации отправлять отчёты нет.
+  p.big.
+    Хороший способ поднять мотивацию — превратить это в игру. Для этого мы разбили город Ростов-на-Дону на 40 <i>нанорайонов</i> и создали между ними конкуренцию.
+
+  mspace
+  img.adapted.rounded.shadowed(src="/static/img/district61/1.png")
+  mspace
+
+  p.
+    На странице каждого нанорайона отображается его рейтинг, все отзывы (их можно оценивать) — и возможность написать свой.
+
+  mspace
+  img.adapted.rounded.shadowed(src="/static/img/district61/2.png")
+  mspace
+
+  p.
+    Отзыв состоит из описания и поля для прикрепления фотографии:
+
+  mspace
+
+  div.column-row
+    div
+      img.rounded.shadowed(src="/static/img/district61/3.png")
+    div
+      img.rounded.shadowed(src="/static/img/district61/4.png")
+
+  mspace
+
+  p.
+    Пример жалобы:
+
+  mspace
+  img.halfquarter.adapted.rounded.shadowed(src="/static/img/district61/5.png")
+  mspace
+    
+  p.
+    При регистрации нужно указать свой нанорайон:
+
+  mspace
+
+  div.column-row
+    div
+      img.rounded.shadowed(src="/static/img/district61/6.png")
+    div
+      img.rounded.shadowed(src="/static/img/district61/7.png")
+
+  mspace
+
+  p.
+    На основании всех отзывов и оценок вычисляется <i>рейтинг</i> нанорайона. 
+  p.
+    Формула должна была соответствовать многим критериям: задизлайканные отзывы должны меньше влиять на рейтинг и наоборот,
+    рейтинг должен хорошо считаться для любого количества пользователей и каким-то образом отсекать спам.
+  p.
+    Лучшие олимпиадные программисты нашей команды долго работали над этой задачей и в конце концов представили нам подходящее решение.
+
+  mspace
+  
+  img.halfquarter.adapted.rounded.shadowed(src="/static/img/district61/8.png")
+
+  mspace
+
+  p.
+    Что это значит — не имею ни малейшего представления.
+  p.
+    Фронт — я (внезапно), бэк — <a href="https://github.com/stepan-neretin7">Степан</a>, математика и деление города — <a href="https://codeforces.com/profile/Renedyn">Глеб</a>. 
+    Сделано на хакатоне «<a href="https://vk.com/hackdigin">Цифровые инновации</a>» в 2021 году.
+  
+  
+  xspace
+
+  .actions
+    +action-telegram
+    +action-project("Pycon", "/static/img/pycon/logo.png", "/pycon")
+
