@@ -7,7 +7,7 @@ mixin content-block(logo_url, title, url, description, external=false, news=fals
         img(src=logo_url)
       div.project-description-wrapper.alpha.rounded
         div.description
-          h5
+          h5.project-title
             span.a(href=url)
               =title
             if external == true
