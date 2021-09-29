@@ -1,0 +1,56 @@
+extends ../header.pug
+
+include ../mixins.pug
+
+mixin station_link(station)
+    div.station.big
+        if station.visited || 1
+            img.line-icon(src=`/static/img/metro/lines/${station.line}.svg`)
+
+            a(href=station.url)
+                =station.name
+        else
+            img.line-icon.transparent(src=`/static/img/metro/lines/${station.line}.svg`)
+
+            span.transparent
+                =station.name
+
+block project
+    h3
+        | Метро
+
+    p.big.
+        Я решил посетить все станции Московского метрополитена и собрать на сайте альманах 
+        — с фотографиями и особенностями каждой станции.
+
+    div.list
+        a.big.dashed(href='#alphabet')
+            | По алфавиту
+        a.big.dashed(href='#lines')
+            | По линиям
+        a.big.dashed(href='#pretty')
+            | По красоте
+
+    div#alphabet-stations
+        - stations.sort((a, b) => {return a.name.localeCompare(b.name)})
+        - var current_letter = 'А'
+
+        <div class="station-alphabet-group">
+
+        h3
+            =current_letter
+
+        each station in stations 
+            - var new_letter = station.name.charAt(0)
+            if new_letter.localeCompare(current_letter)
+                </div>
+                <div class="station-alphabet-group">
+                h3
+                    =new_letter
+                - current_letter = new_letter
+                
+            +station_link(station)
+                
+                    
+    
+

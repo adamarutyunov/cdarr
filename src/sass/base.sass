@@ -68,7 +68,7 @@ h6
 
 a,.a
     text-decoration: none
-    border-bottom: .08em solid black
+    border-bottom: .03em solid rgba(0, 0, 0, 0.3)
     color: black
 
     &:hover
@@ -76,7 +76,7 @@ a,.a
         border-color: $hover-color !important
 
     &.dashed
-        border-bottom: 2px dashed black
+        border-bottom: .03em dashed rgba(0, 0, 0, 0.3)
 
     &.implicit
         border: none
@@ -85,8 +85,16 @@ a,.a
         &:hover
             color: black !important
 
+span,a,.a
+    padding-top: .3em
+
+
 .big
     font-size: 23pt
+
+
+.transparent
+    opacity: 0.3
 
 
 p 

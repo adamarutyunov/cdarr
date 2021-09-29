@@ -1,3 +1,24 @@
+.right-gradient {
+  color: linear-gradient(to right, #c7100c 0%, #b41020 7%, #6e1d53 43%, #3b2678 81%, #3f00be 100%); }
+
+.light-grey {
+  color: #f1f1f1; }
+
+.grey {
+  color: #cccbcb; }
+
+.dark-grey {
+  color: #464646; }
+
+.code {
+  color: #3fbfd8; }
+
+.hover-color {
+  color: #4460ff; }
+
+.light-green {
+  color: #23d800; }
+
 * {
   padding: 0;
   margin: 0;
@@ -58,21 +79,27 @@ h6 {
 
 a, .a {
   text-decoration: none;
-  border-bottom: .08em solid black;
+  border-bottom: 0.03em solid rgba(0, 0, 0, 0.3);
   color: black; }
   a:hover, .a:hover {
     color: #4460ff !important;
     border-color: #4460ff !important; }
   a.dashed, .a.dashed {
-    border-bottom: 2px dashed black; }
+    border-bottom: 0.03em dashed rgba(0, 0, 0, 0.3); }
   a.implicit, .a.implicit {
     border: none;
     text-decoration: none; }
     a.implicit:hover, .a.implicit:hover {
       color: black !important; }
 
+span, a, .a {
+  padding-top: .3em; }
+
 .big {
   font-size: 23pt; }
+
+.transparent {
+  opacity: 0.3; }
 
 p {
   margin: 1em 0; }
@@ -114,6 +141,27 @@ lspace {
 xspace {
   display: block;
   height: 100px; }
+
+.right-gradient {
+  color: linear-gradient(to right, #c7100c 0%, #b41020 7%, #6e1d53 43%, #3b2678 81%, #3f00be 100%); }
+
+.light-grey {
+  color: #f1f1f1; }
+
+.grey {
+  color: #cccbcb; }
+
+.dark-grey {
+  color: #464646; }
+
+.code {
+  color: #3fbfd8; }
+
+.hover-color {
+  color: #4460ff; }
+
+.light-green {
+  color: #23d800; }
 
 .verdicts {
   display: flex;
@@ -262,6 +310,27 @@ xspace {
 .untitled-violet-eye {
   max-width: 500px; }
 
+.right-gradient {
+  color: linear-gradient(to right, #c7100c 0%, #b41020 7%, #6e1d53 43%, #3b2678 81%, #3f00be 100%); }
+
+.light-grey {
+  color: #f1f1f1; }
+
+.grey {
+  color: #cccbcb; }
+
+.dark-grey {
+  color: #464646; }
+
+.code {
+  color: #3fbfd8; }
+
+.hover-color {
+  color: #4460ff; }
+
+.light-green {
+  color: #23d800; }
+
 .fline {
   display: flex;
   align-items: flex-start;
@@ -349,6 +418,27 @@ xspace {
 
 .shadowed {
   box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.15); }
+
+#alphabet-stations {
+  display: table; }
+
+.station {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; }
+
+.station-alphabet-group {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-right: 100px; }
+
+.list * {
+  margin-right: 1em; }
+
+.line-icon {
+  width: 1.2em;
+  margin-right: .5em;
+  padding-top: 0.1em; }
 
 .mail {
   display: flex;

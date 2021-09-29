@@ -7,6 +7,8 @@ const DEBUG = (process.argv[2] == "-D")
 var config = require("./config.json")
 const port = config.port
 
+const static = require('./src/js/static.js')
+
 app.set('views', './src/pug')
 app.set('view engine', 'pug');
 app.use('/static', express.static('static'));
@@ -14,6 +16,10 @@ app.use('/static', express.static('static'));
 
 app.get('/', (req, res) => {
     res.render('index', {title: "Я"});
+})
+
+app.get('/metro', (req, res) => {
+    res.render('metro/index', {title: "Метро", stations: static.stations});
 })
 
 app.get('/pycon', (req, res) => {
