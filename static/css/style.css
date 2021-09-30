@@ -67,6 +67,12 @@ h3 {
   font-weight: normal;
   font-size: 105pt; }
 
+h4 {
+  font-variation-settings: "wght" 300;
+  font-weight: normal;
+  font-size: 80pt;
+  line-height: 1; }
+
 h5 {
   font-variation-settings: "wght" 300;
   font-weight: normal;
@@ -80,7 +86,8 @@ h6 {
 a, .a {
   text-decoration: none;
   border-bottom: 0.03em solid rgba(0, 0, 0, 0.3);
-  color: black; }
+  color: black;
+  cursor: pointer; }
   a:hover, .a:hover {
     color: #4460ff !important;
     border-color: #4460ff !important; }
@@ -97,6 +104,15 @@ span, a, .a {
 
 .big {
   font-size: 23pt; }
+
+.bold {
+  font-variation-settings: "wght" 600; }
+
+.hidden {
+  display: none; }
+
+.nowrap {
+  white-space: nowrap; }
 
 .transparent {
   opacity: 0.3; }
@@ -419,13 +435,11 @@ xspace {
 .shadowed {
   box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.15); }
 
-#alphabet-stations {
-  display: table; }
-
 .station {
   display: flex;
   align-items: center;
-  margin-bottom: 5px; }
+  margin-bottom: 7px;
+  margin-top: 7px; }
 
 .station-alphabet-group {
   margin-bottom: 50px;
@@ -438,7 +452,7 @@ xspace {
 .line-icon {
   width: 1.2em;
   margin-right: .5em;
-  padding-top: 0.1em; }
+  padding-bottom: 0.1em; }
 
 .mail {
   display: flex;

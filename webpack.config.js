@@ -9,7 +9,7 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'static'),
-    filename: 'app_bundle.js',
+    filename: 'bundle.js',
     publicPath: '/static'
   },
   module: {
@@ -34,6 +34,11 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "css/style.css",
+    }),
+    new webpack.ProvidePlugin({
+      $: "/src/js/jquery-3.6.0.min.js",
+      jQuery: "/src/js/jquery-3.6.0.min.js",
+      "window.jQuery": "/src/js/jquery-3.6.0.min.js"
     })
   ],
   devtool: false

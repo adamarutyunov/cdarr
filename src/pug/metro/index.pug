@@ -2,18 +2,32 @@ extends ../header.pug
 
 include ../mixins.pug
 
-mixin station_link(station)
+mixin station_link(station, icon=true)
     div.station.big
-        if station.visited || 1
-            img.line-icon(src=`/static/img/metro/lines/${station.line}.svg`)
+        if station.visited
+            if icon
+                img.line-icon(src=`/static/img/metro/lines/${station.line}.svg`)
 
-            a(href=station.url)
-                =station.name
+            div
+                a(href=station.url)
+                    =station.name
         else
-            img.line-icon.transparent(src=`/static/img/metro/lines/${station.line}.svg`)
+            if icon
+                img.line-icon.transparent(src=`/static/img/metro/lines/${station.line}.svg`)
 
-            span.transparent
-                =station.name
+            div
+                span.transparent
+                    =station.name
+
+            
+mixin line_big(line)
+    div.line-caption
+        //img.line-icon(src=`/static/img/metro/lines/${line.number}.svg`)
+        h4.line-name
+            =line.name
+
+
+
 
 block project
     h3
@@ -23,15 +37,21 @@ block project
         Я решил посетить все станции Московского метрополитена и собрать на сайте альманах 
         — с фотографиями и особенностями каждой станции.
 
-    div.list
-        a.big.dashed(href='#alphabet')
+    div.list#stations-menu
+        a.big.dashed.hidden#button-alphabet
             | По алфавиту
-        a.big.dashed(href='#lines')
+        span.big.bold#button-alphabet-active
+            | По алфавиту
+
+        a.big.dashed#button-lines
             | По линиям
-        a.big.dashed(href='#pretty')
+        span.big.bold.hidden#button-lines-active
+            | По линиям
+
+        span.big.grey#button-pretty
             | По красоте
 
-    div#alphabet-stations
+    div#alphabet
         - stations.sort((a, b) => {return a.name.localeCompare(b.name)})
         - var current_letter = 'А'
 
@@ -50,7 +70,32 @@ block project
                 - current_letter = new_letter
                 
             +station_link(station)
-                
-                    
+
+        </div>
+
+    div#lines.hidden
+        - stations.sort((a, b) => {
+        -    return line_order.indexOf(a.line) - line_order.indexOf(b.line)
+        - })
+
+        - var current_line = lines["1"]
+
+        <div class="station-alphabet-group">
+
+        
+        +line_big(current_line)
+
+        each station in stations
+            - var new_line = lines[station.line]
+            if current_line.number.localeCompare(new_line.number)
+                </div>
+                <div class="station-alphabet-group">
     
+                +line_big(new_line)
+
+                - current_line = new_line
+                
+            +station_link(station, icon=true)
+
+        </div>
 

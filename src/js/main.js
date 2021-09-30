@@ -59,6 +59,26 @@ for (let anchor of anchors) {
   })
 }
 
+$('#button-lines').click(function(){
+  $('#alphabet').addClass('hidden')
+  $('#lines').removeClass('hidden')
+
+  $('#stations-menu *:not(#button-pretty)').hide()
+  $('#stations-menu #button-alphabet').show()
+  $('#stations-menu #button-lines-active').show()
+
+})
+
+$('#button-alphabet').click(function(){
+  $('#lines').addClass('hidden')
+  $('#alphabet').removeClass('hidden')
+
+  $('#stations-menu *:not(#button-pretty)').hide()
+  $('#stations-menu #button-lines').show()
+  $('#stations-menu #button-alphabet-active').show()
+})
+
+
 window.set_verdict_description = set_verdict_description
 window.clear_verdict_description = clear_verdict_description
 window.set_packet_description = set_packet_description
