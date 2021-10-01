@@ -89,7 +89,7 @@ stations = [
   {
       "name": "Бульвар Рокоссовского",
       "url": "/metro/stations/bulvar_rokossovskogo",
-      "line": "1"
+      "line": "1",
   },
   {
       "name": "Черкизовская",

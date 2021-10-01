@@ -67,6 +67,7 @@ $('#button-lines').click(function(){
   $('#stations-menu #button-alphabet').show()
   $('#stations-menu #button-lines-active').show()
 
+  sessionStorage.setItem('group', 'lines')
 })
 
 $('#button-alphabet').click(function(){
@@ -76,7 +77,19 @@ $('#button-alphabet').click(function(){
   $('#stations-menu *:not(#button-pretty)').hide()
   $('#stations-menu #button-lines').show()
   $('#stations-menu #button-alphabet-active').show()
+
+  sessionStorage.setItem('group', 'alphabet')
 })
+
+$('#button-pretty').hover(() => {
+  $('#pretty-placeholder').show()
+}, () => {
+  $('#pretty-placeholder').hide()
+})
+
+if (sessionStorage.getItem('group') == 'lines') {
+  $('#button-lines').click()
+}
 
 
 window.set_verdict_description = set_verdict_description

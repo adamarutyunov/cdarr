@@ -3,7 +3,7 @@ extends ../header.pug
 include ../mixins.pug
 
 mixin station_link(station, icon=true)
-    div.station.big
+    div.station.big 
         if station.visited
             if icon
                 img.line-icon(src=`/static/img/metro/lines/${station.line}.svg`)
@@ -21,10 +21,22 @@ mixin station_link(station, icon=true)
 
             
 mixin line_big(line)
-    div.line-caption
-        //img.line-icon(src=`/static/img/metro/lines/${line.number}.svg`)
-        h4.line-name
+    div.line
+        h5
+            img.line-icon(src=`/static/img/metro/lines/${line.number}.svg`)
+        h5
             =line.name
+
+
+mixin stations_counter
+    div.stations-counter.big
+        | Уже посетил —
+        br
+        - visited = stations.filter(station => station.visited != undefined).length
+        span.h3
+            =visited
+        | /
+        = stations.length
 
 
 
@@ -34,8 +46,10 @@ block project
         | Метро
 
     p.big.
-        Я решил посетить все станции Московского метрополитена и собрать на сайте альманах 
-        — с фотографиями и особенностями каждой станции.
+        Я решил посетить <i>все</i> станции Московского метрополитена — и собрать их здесь.
+        На странице каждой посещённой станции    фотографии и всякие интересные связанные с ней штуки.
+
+    +stations_counter
 
     div.list#stations-menu
         a.big.dashed.hidden#button-alphabet
@@ -49,7 +63,9 @@ block project
             | По линиям
 
         span.big.grey#button-pretty
-            | По красоте
+            | По красоте 
+            span.big.green.hidden#pretty-placeholder
+                | — позже
 
     div#alphabet
         - stations.sort((a, b) => {return a.name.localeCompare(b.name)})
