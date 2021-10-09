@@ -1,0 +1,117 @@
+extends ../header.pug
+
+include ../mixins.pug
+
+mixin station_link(station, icon=true)
+    div.station.big 
+        if station.visited
+            if icon
+                img.line-icon(src=`/static/img/metro/lines/${station.line}.svg`)
+
+            div
+                a(href=station.url)
+                    =station.name
+        else
+            if icon
+                img.line-icon.transparent(src=`/static/img/metro/lines/${station.line}.svg`)
+
+            div
+                span.transparent
+                    =station.name
+
+            
+mixin line_big(line)
+    div.line
+        h5
+            img.line-icon(src=`/static/img/metro/lines/${line.number}.svg`)
+        h5
+            =line.name
+
+
+mixin stations_counter
+    div.stations-counter.big
+        | Уже посетил —
+        br
+        - visited = stations.filter(station => station.visited != undefined).length
+        span.h3
+            =visited
+        | /
+        = stations.length
+
+
+
+
+block project
+    h3
+        | Метро
+
+    p.big.
+        Я решил посетить <i>все</i> станции Московского метрополитена — и собрать их здесь.
+        На странице каждой посещённой станции    фотографии и всякие интересные связанные с ней штуки.
+
+    +stations_counter
+
+    div.list#stations-menu
+        a.big.dashed.hidden#button-alphabet
+            | По алфавиту
+        span.big.bold#button-alphabet-active
+            | По алфавиту
+
+        a.big.dashed#button-lines
+            | По линиям
+        span.big.bold.hidden#button-lines-active
+            | По линиям
+
+        span.big.grey#button-pretty
+            | По красоте 
+            span.big.green.hidden#pretty-placeholder
+                | — позже
+
+    div#alphabet
+        - stations.sort((a, b) => {return a.name.localeCompare(b.name)})
+        - var current_letter = 'А'
+
+        <div class="station-alphabet-group">
+
+        h3
+            =current_letter
+
+        each station in stations 
+            - var new_letter = station.name.charAt(0)
+            if new_letter.localeCompare(current_letter)
+                </div>
+                <div class="station-alphabet-group">
+                h3
+                    =new_letter
+                - current_letter = new_letter
+                
+            +station_link(station)
+
+        </div>
+
+    div#lines.hidden
+        - stations.sort((a, b) => {
+        -    return line_order.indexOf(a.line) - line_order.indexOf(b.line)
+        - })
+
+        - var current_line = lines["1"]
+
+        <div class="station-alphabet-group">
+
+        
+        +line_big(current_line)
+
+        each station in stations
+            - var new_line = lines[station.line]
+            if current_line.number.localeCompare(new_line.number)
+                </div>
+                <div class="station-alphabet-group">
+    
+                +line_big(new_line)
+
+                - current_line = new_line
+                
+            +station_link(station, icon=true)
+
+        </div>
+
