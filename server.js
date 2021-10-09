@@ -54,6 +54,14 @@ app.get('/kfssr', (req, res) => {
     res.send('Слава Карелии!')
 })
 
+for (station in static.stations) {
+    if (station.visited) {
+        app.get(station.url, (req, res) => {
+            res.render(station.url, {title: station.name})
+        })
+    }
+}
+
 
 if (DEBUG) {
     var server = http.createServer(app)
