@@ -59,7 +59,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! jQuery v3.6.
   \************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-/* provided dependency */ var $ = __webpack_require__(/*! ../../src/js/jquery-3.6.0.min.js */ "./src/js/jquery-3.6.0.min.js");
+/* provided dependency */ var $ = __webpack_require__(/*! ../../../src/js/jquery-3.6.0.min.js */ "./src/js/jquery-3.6.0.min.js");
 function set_verdict_description(verdict) {
   let verdict_id = verdict.id
   let description = document.getElementById("verdict-description")

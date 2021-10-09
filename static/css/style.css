@@ -101,6 +101,8 @@ a, .a {
 
 span, a, .a {
   padding-top: .3em; }
+  span.no-padding, a.no-padding, .a.no-padding {
+    padding-top: 0; }
 
 .big {
   font-size: 23pt; }
