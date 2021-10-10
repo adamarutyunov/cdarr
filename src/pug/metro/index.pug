@@ -70,6 +70,8 @@ block project
     div#alphabet
         - stations.sort((a, b) => {return a.name.localeCompare(b.name)})
         - var current_letter = 'А'
+        - var skip_letters = ['Д', 'З', 'И', 'Ц', 'Ч', 'Щ', 'Ю', 'Я']
+        - var aliases = {'Г': 'Г, Д', 'Ж': 'Ж, З, И', 'Х': 'Х, Ц, Ч', 'Ш': 'Ш, Щ', 'Э': 'Э, Ю, Я'}
 
         <div class="station-alphabet-group">
 
@@ -78,11 +80,14 @@ block project
 
         each station in stations 
             - var new_letter = station.name.charAt(0)
-            if new_letter.localeCompare(current_letter)
+            if new_letter.localeCompare(current_letter) && (skip_letters.indexOf(new_letter) == -1)
                 </div>
                 <div class="station-alphabet-group">
                 h3
-                    =new_letter
+                    if new_letter in aliases
+                        =aliases[new_letter]
+                    else
+                        =new_letter
                 - current_letter = new_letter
                 
             +station_link(station)
