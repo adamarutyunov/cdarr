@@ -7,7 +7,7 @@ yarn-error.log*
 lerna-debug.log*
 
 # Vim swap
-.swp
+*.swp
 
 # Deploy script
 deploy.sh
