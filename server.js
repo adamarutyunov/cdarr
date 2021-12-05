@@ -19,40 +19,27 @@ app.get('/', (req, res) => {
 })
 
 app.get('/metro', (req, res) => {
-    res.render('metro/index', {title: "Метро", stations: static.stations});
+    res.render('metro/index', {title: "Метро"});
 })
 
-app.get('/pycon', (req, res) => {
-    res.render('pycon', {title: "Pycon"});
-})
+let projects = static.projects.filter(item => !item.external)
 
-app.get('/chekker', (req, res) => {
-    res.render('chekker', {title: "Chekker"});
-})
+for (let key in projects) {
+	let project = projects[key]
 
-app.get('/chatile', (req, res) => {
-    res.render('chatile', {title: "Chatile"});
-})
-
-app.get('/qladmin', (req, res) => {
-    res.render('qladmin', {title: "QLAdmin"});
-})
-
-app.get('/untitled', (req, res) => {
-    res.render('untitled', {title: "Untitled"});
-})
-
-app.get('/district61', (req, res) => {
-    res.render('district61', {title: "District 61"});
-})
-
-app.get('/university', (req, res) => {
-    res.render('pages/university', {title: "Объявление №1"});
-})
+	app.get('/' + project.url, (req, res) => {
+		res.render(project.url, {
+			project: project, 
+			next_project: projects[(parseInt(key) + 1) % projects.length],
+			title: project.title,
+		})
+	})
+}
 
 app.get('/kfssr', (req, res) => {
     res.send('Слава Карелии!')
 })
+
 
 for (station in static.stations) {
     if (station.visited) {

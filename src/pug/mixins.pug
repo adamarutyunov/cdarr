@@ -11,14 +11,14 @@ mixin action-telegram
                 | Нет, я не псих
 
 
-mixin action-project(title, image_url, project_url)
+mixin action-project(project)
     div.action-block
         div.action-logo
-            a.implicit(href=project_url)
-                img(src=image_url)
+            a.implicit(href=project.url)
+                img(src=project.logo_url)
         div.action-description
             span
                 | Дальше:
             br
-            a(href=project_url)
-                =title
+            a(href=project.url)
+                =project.title
