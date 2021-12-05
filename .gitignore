@@ -116,4 +116,4 @@ dist
 .tern-port
 
 # macOS temp file
-.DS_Store
+*.DS_Store

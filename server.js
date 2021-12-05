@@ -22,9 +22,17 @@ app.get('/metro', (req, res) => {
     res.render('metro/index', {title: "Метро"});
 })
 
-for (let project of static.projects) {
+let projects = static.projects.filter(item => !item.external)
+
+for (let key in projects) {
+	let project = projects[key]
+
 	app.get('/' + project.url, (req, res) => {
-		res.render(project.url, {project: project, title: project.title});
+		res.render(project.url, {
+			project: project, 
+			next_project: projects[(parseInt(key) + 1) % projects.length],
+			title: project.title,
+		})
 	})
 }
 

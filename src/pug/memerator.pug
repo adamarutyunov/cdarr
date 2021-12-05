@@ -1,0 +1,98 @@
+extends header.pug
+
+include mixins.pug
+
+block project
+  h3
+    | Мемератор
+
+  p.big.nomargin.
+    В марте 2021 года я игрался с 
+    <a href='https://en.wikipedia.org/wiki/Generative_adversarial_network'>
+      генеративно-состязательными нейросетями</a>.
+    Это комбинация из двух нейросетей — одна генерирует картинки, а вторая говорит, насколько они похожи на
+    исходную выборку. Натренировав нейросети, можно генерировать уникальные изображения.
+  p.big.
+    Я решил взять за исходную выборку классические мемы начала 2010-х годов, потому что у них чёткие и чёрно-белые контуры. 
+    Так получился Мемератор.
+
+  mspace
+  div.column-row
+    div
+      img.rounded.shadowed(src="/static/img/memerator/11.png")
+    div
+      img.rounded.shadowed(src="/static/img/memerator/12.png")
+    div
+      img.rounded.shadowed(src="/static/img/memerator/13.png")
+  mspace
+
+  p.
+    Всё начинается со случайного шума, потому что в начале обучения нейросеть заполняется случайными числами.
+    Это результат после пяти эпох — то есть прогонов всего датасета через нейросеть.
+
+  mspace
+  img.halfquarter.adapted.rounded.shadowed(src="/static/img/memerator/2.png")
+  mspace
+
+  p.
+    Постепенно две сети <i>— генератор и дискриминатор —</i> начинают играть в игру «кто кого обманет».
+    Генератор отдаёт дискриминатору сгенерированные рисунки, подмешивая в них изображения из исходной выборки.
+    Дискриминатор учится отличать настоящие картинки от сгенерированных, а генератор — создавать изображения, неотличимые от оригинала.
+
+  p.
+    Результат спустя сто эпох:
+
+  mspace
+  img.halfquarter.adapted.rounded.shadowed(src="/static/img/memerator/3.png")
+  mspace
+
+  p.
+    Нейросеть обучается, и сгенерированные изображения становятся всё больше похожи на настоящие мемы.
+
+    Пятьсот эпох:
+
+  mspace
+  img.halfquarter.adapted.rounded.shadowed(src="/static/img/memerator/4.png")
+  mspace
+
+  p.
+    В этот момент лучше остановиться, потому что сети переобучаются и начинают создавать изображения точь-в-точь как в датасете — кому это нужно?
+
+  mspace
+  img.halfquarter.adapted.rounded.shadowed(src="/static/img/memerator/5.png")
+  mspace
+
+  p.
+      Самые интересные результаты получаются, когда генератор уже умеет создавать нужные очертания, но пока не знает, 
+      какие изображения точно распознаются дискриминатором.
+      Несколько мемов часто оказываются смешанными в одной картинке, и получаются интересные и уникальные изображения:
+
+  mspace
+  img.halfquarter.adapted.rounded.shadowed(src="/static/img/memerator/6.png")
+  mspace
+
+  p.
+    Я отобрал двенадцать лучших нейромемов и сделал из них стикерпак
+    «<a href='https://t.me/addstickers/MemeratorStickers'>Мемератор</a>».
+
+  mspace
+  img.half.adapted.rounded.shadowed(src="/static/img/memerator/stickerpack.png")
+  mspace
+
+  .actionlinks
+    .actionlink
+      a(href="https://t.me/addstickers/MemeratorStickers")
+        | Установить стикерпак
+
+  lspace
+
+  p.
+    Нейросеть и обучение — я, 
+    телеграм-бот (не используется) — <a href='https://github.com/johtai'>johtai</a>,
+    датасет — <a href='https://vk.com/a.armen_001'>Армен</a>.
+
+  lspace
+
+  .actions
+    +action-telegram
+    +action-project(next_project)
