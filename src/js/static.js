@@ -1,19 +1,31 @@
 let good_color = "40AA3B"
 let bad_color = "#DD0000"
 
-projects = [
+projects = 
+{
+	text: [
 	{
-		logo_url: "/static/img/memerator/logo.png", 
-		title: "Мемератор", 
-		url: "memerator", 
-		description: "Генеративно-состязательная нейросеть для создания классических мемов из десятых. И стикерпак для Телеграма, в котором собраны лучшие образцы уникальных эмоций.",
+		logo_url: "/static/img/wspectator.png", 
+		title: "Нет, я не псих", 
+		url: "https://t.me/wspectator", 
+		description: "Канал в Телеграме, где я думаю текстом уже три года. Изначально был про ненависть и рейдж, а потом оказалось, что я, наоборот, всё обожаю. Пишу редко.", 
+		external: true
 	},
+	
 	{
 		logo_url: "/static/img/circle_negative.png", 
 		title: "Адам Арутюнов поднимается до мидла", 
 		url: "https://t.me/cdarr", 
 		description: "Месяц назад я подумал, что хватит уже быть новичком, и решил подняться до мидла за полгода. Канал в Телеграме про мой прогресс, ну и наблюдения вообще за тем, что творится.", 
 		external: true
+	}], 
+
+	code: [
+	{
+		logo_url: "/static/img/memerator/logo.png", 
+		title: "Мемератор", 
+		url: "memerator", 
+		description: "Генеративно-состязательная нейросеть для создания классических мемов из десятых. И стикерпак для Телеграма, в котором собраны лучшие образцы уникальных эмоций.",
 	},
 	{
 		logo_url: "/static/img/pycon/logo.png", 
@@ -50,16 +62,8 @@ projects = [
 		title: "QLAdmin", 
 		url: "qladmin", 
 		description: "Приложение для администрирования баз данных SQLite3 на Python и Qt с базовыми функциями для работы с таблицами, простым интерфейсом и низким порогом входа. Проект Яндекс.Лицея."
-	},
-
-	{
-		logo_url: "/static/img/wspectator.png", 
-		title: "Нет, я не псих", 
-		url: "https://t.me/wspectator", 
-		description: "Канал в Телеграме, где я думаю текстом уже три года. Изначально был про ненависть и рейдж, а потом оказалось, что я, наоборот, всё обожаю. Пишу редко.", 
-		external: true
-	},
-]
+	}],
+}
 
 verdicts = {
 	"verdict-ok": ["Все тесты пройдены, решение верное.", good_color],
@@ -1244,6 +1248,51 @@ stations = [
   {
       "name": "Савёловская",
       "url": "/metro/stations/savyolovskaya_11",
+      "line": "11"
+  },
+  {
+      "name": "Терехово",
+      "url": "/metro/stations/terekhovo",
+      "line": "11"
+  },
+  {
+      "name": "Кунцевская",
+      "url": "/metro/stations/kuntsevskaya_11",
+      "line": "11"
+  },
+  {
+      "name": "Давыдково",
+      "url": "/metro/stations/davydkovo",
+      "line": "11"
+  },
+  {
+      "name": "Аминьевская",
+      "url": "/metro/stations/aminyevskaya",
+      "line": "11"
+  },
+  {
+      "name": "Мичуринский проспект",
+      "url": "/metro/stations/michurinsky_prospekt_11",
+      "line": "11"
+  },
+  {
+      "name": "Проспект Вернадского",
+      "url": "/metro/stations/prospekt_vernadskogo_11",
+      "line": "11"
+  },
+  {
+      "name": "Новаторская",
+      "url": "/metro/stations/novatorskaya_11",
+      "line": "11"
+  },
+  {
+      "name": "Воронцовская",
+      "url": "/metro/stations/vorontsovskaya",
+      "line": "11"
+  },
+  {
+      "name": "Зюзино",
+      "url": "/metro/stations/Zyuzino",
       "line": "11"
   },
   {
