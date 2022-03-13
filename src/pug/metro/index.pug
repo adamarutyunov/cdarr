@@ -30,7 +30,7 @@ mixin line_big(line)
 
 mixin stations_counter
     div.stations-counter.big
-        | Уже посетил —
+        | Уже написал про
         br
         - visited = stations.filter(station => station.visited != undefined).length
         span.h3
@@ -46,8 +46,8 @@ block project
         | Метро
 
     p.big.
-        Я решил посетить <i>все</i> станции Московского метрополитена — и собрать их здесь.
-        На странице каждой посещённой станции    фотографии и всякие интересные связанные с ней штуки.
+        Я посетил <i>все</i> станции Московского метрополитена.
+        На странице каждой станции — фотографии и всякие интересные штуки.
 
     +stations_counter
 

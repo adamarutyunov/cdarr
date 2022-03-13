@@ -229,17 +229,20 @@ span.gradient
 
 .action-block
     width: 100%
-    max-width: 500px
     display: flex
     align-items: center
 
     margin-right: 100px
 
-    & .action-logo
-        width: 20%
+    .action-logo
+        width: 100px
         margin-right: 30px
 
-    & .action-description a
+        &.rounded
+            img
+              border-radius: 50%
+
+    .action-description a
         font-size: 30pt
 
 .actions

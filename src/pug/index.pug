@@ -47,15 +47,31 @@ block content
       img(src="/static/svg/hexagon.svg")
 
   div#main
-    span.big
-      | Пишу код и текст. Живу в Москве-на-Дону. 
-      a.dashed(href="#contact")
-        | Написать
+    #menu
+      a.dashed(href="#text")
+        | Пишу
+      | ⋅
+      a.dashed(href="#code")
+        | Мешки ворочаю
+      | ⋅
+      a(href="/trip")
+        | Трипы
+      | ⋅
+      a(href="/metro")
+        | Метро
+      | ⋅
+      a(href="/shop")
+        | <b>?????????</b>
 
     
+    #text
+
+    each project in projects.text
+        +content-block(project.logo_url, project.title, project.url, project.description, project.external, project.new)
+
     #code
 
-    each project in projects
+    each project in projects.code
         +content-block(project.logo_url, project.title, project.url, project.description, project.external, project.new)
 
     lspace

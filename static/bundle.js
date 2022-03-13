@@ -40,6 +40,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/sass/shop.sass":
+/*!****************************!*\
+  !*** ./src/sass/shop.sass ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/sass/trip.sass":
+/*!****************************!*\
+  !*** ./src/sass/trip.sass ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/js/jquery-3.6.0.min.js":
 /*!************************************!*\
   !*** ./src/js/jquery-3.6.0.min.js ***!
@@ -172,20 +198,31 @@ window.stop_animation = stop_animation
 let good_color = "40AA3B"
 let bad_color = "#DD0000"
 
-projects = [
+projects = 
+{
+	text: [
 	{
-		logo_url: "/static/img/memerator/logo.png", 
-		title: "Мемератор", 
-		url: "memerator", 
-		description: "Генеративно-состязательная нейросеть для создания классических мемов из десятых. И стикерпак для Телеграма, в котором собраны лучшие образцы уникальных эмоций.",
-		new: true
+		logo_url: "/static/img/wspectator.png", 
+		title: "Нет, я не псих", 
+		url: "https://t.me/wspectator", 
+		description: "Канал в Телеграме, где я думаю текстом уже три года. Изначально был про ненависть и рейдж, а потом оказалось, что я, наоборот, всё обожаю. Пишу редко.", 
+		external: true
 	},
+	
 	{
 		logo_url: "/static/img/circle_negative.png", 
 		title: "Адам Арутюнов поднимается до мидла", 
 		url: "https://t.me/cdarr", 
 		description: "Месяц назад я подумал, что хватит уже быть новичком, и решил подняться до мидла за полгода. Канал в Телеграме про мой прогресс, ну и наблюдения вообще за тем, что творится.", 
 		external: true
+	}], 
+
+	code: [
+	{
+		logo_url: "/static/img/memerator/logo.png", 
+		title: "Мемератор", 
+		url: "memerator", 
+		description: "Генеративно-состязательная нейросеть для создания классических мемов из десятых. И стикерпак для Телеграма, в котором собраны лучшие образцы уникальных эмоций.",
 	},
 	{
 		logo_url: "/static/img/pycon/logo.png", 
@@ -222,14 +259,105 @@ projects = [
 		title: "QLAdmin", 
 		url: "qladmin", 
 		description: "Приложение для администрирования баз данных SQLite3 на Python и Qt с базовыми функциями для работы с таблицами, простым интерфейсом и низким порогом входа. Проект Яндекс.Лицея."
-	},
+	}],
+}
 
+trips = [
 	{
-		logo_url: "/static/img/wspectator.png", 
-		title: "Нет, я не псих", 
-		url: "https://t.me/wspectator", 
-		description: "Канал в Телеграме, где я думаю текстом уже три года. Изначально был про ненависть и рейдж, а потом оказалось, что я, наоборот, всё обожаю. Пишу редко.", 
-		external: true
+		name: 'Казань',
+		year: 2021,
+		preview: '/static/img/trip/kazan2021.jpg',
+		url: 'https://www.youtube.com/watch?v=gsrNwu9OSYQ',
+	},
+	{
+		name: 'Москва',
+		year: 2021,
+		preview: '/static/img/trip/moscow2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Краснодар и Новороссийск',
+		year: 2021,
+		preview: '/static/img/trip/krasnodar_novorossiysk_2021.jpg',
+		url: 'https://www.youtube.com/watch?v=WJ74FRhSjeI',
+	},
+	{
+		name: 'Волгоград',
+		year: 2021,
+		preview: '/static/img/trip/volgograd2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Минеральные Воды',
+		year: 2021,
+		preview: '/static/img/trip/minvody2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Москва — 2',
+		year: 2021,
+		preview: '/static/img/trip/moscow20212.jpg',
+		url: null,
+	},
+	{
+		name: 'Санкт-Петербург',
+		year: 2021,
+		preview: '/static/img/trip/saintpetersburg2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Ростов-на-Дону',
+		year: 2021,
+		preview: '/static/img/trip/rostovondon2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Ярославль',
+		year: 2021,
+		preview: '/static/img/trip/yaroslavl2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Тверь',
+		year: 2021,
+		preview: '/static/img/trip/tver2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Санкт-Петербург и Выборг',
+		year: 2021,
+		preview: '/static/img/trip/vyborg2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Владикавказ',
+		year: 2022,
+		preview: '/static/img/trip/vladikavkaz2022.jpg',
+		url: null,
+	},
+	{
+		name: 'Сочи, Адлер и Сириус',
+		year: 2022,
+		preview: '/static/img/trip/sochi2022.jpg',
+		url: null,
+	},
+	{
+		name: 'Таганрог',
+		year: 2022,
+		preview: '/static/img/trip/taganrog2022.jpg',
+		url: null,
+	},
+	{
+		name: 'Новороссийск',
+		year: 2022,
+		preview: '/static/img/trip/novorossiysk2022.jpg',
+		url: null,
+	},
+	{
+		name: 'Москва',
+		year: 2022,
+		preview: '/static/img/trip/moscow2022.jpg',
+		url: null,
 	},
 ]
 
@@ -1419,6 +1547,51 @@ stations = [
       "line": "11"
   },
   {
+      "name": "Терехово",
+      "url": "/metro/stations/terekhovo",
+      "line": "11"
+  },
+  {
+      "name": "Кунцевская",
+      "url": "/metro/stations/kuntsevskaya_11",
+      "line": "11"
+  },
+  {
+      "name": "Давыдково",
+      "url": "/metro/stations/davydkovo",
+      "line": "11"
+  },
+  {
+      "name": "Аминьевская",
+      "url": "/metro/stations/aminyevskaya",
+      "line": "11"
+  },
+  {
+      "name": "Мичуринский проспект",
+      "url": "/metro/stations/michurinsky_prospekt_11",
+      "line": "11"
+  },
+  {
+      "name": "Проспект Вернадского",
+      "url": "/metro/stations/prospekt_vernadskogo_11",
+      "line": "11"
+  },
+  {
+      "name": "Новаторская",
+      "url": "/metro/stations/novatorskaya_11",
+      "line": "11"
+  },
+  {
+      "name": "Воронцовская",
+      "url": "/metro/stations/vorontsovskaya",
+      "line": "11"
+  },
+  {
+      "name": "Зюзино",
+      "url": "/metro/stations/Zyuzino",
+      "line": "11"
+  },
+  {
       "name": "Каширская",
       "url": "/metro/stations/kashirskaya_11",
       "line": "11"
@@ -1677,10 +1850,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_base_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/base.sass */ "./src/sass/base.sass");
 /* harmony import */ var _sass_cosmetic_sass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sass/cosmetic.sass */ "./src/sass/cosmetic.sass");
 /* harmony import */ var _sass_project_sass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sass/project.sass */ "./src/sass/project.sass");
-/* harmony import */ var _js_static_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/static.js */ "./src/js/static.js");
-/* harmony import */ var _js_static_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_static_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/main.js */ "./src/js/main.js");
-/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_main_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _sass_trip_sass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sass/trip.sass */ "./src/sass/trip.sass");
+/* harmony import */ var _sass_shop_sass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sass/shop.sass */ "./src/sass/shop.sass");
+/* harmony import */ var _js_static_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/static.js */ "./src/js/static.js");
+/* harmony import */ var _js_static_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_js_static_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/main.js */ "./src/js/main.js");
+/* harmony import */ var _js_main_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_main_js__WEBPACK_IMPORTED_MODULE_6__);
+
+
 
 
 

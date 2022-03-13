@@ -22,7 +22,15 @@ app.get('/metro', (req, res) => {
     res.render('metro/index', {title: "Метро"});
 })
 
-let projects = static.projects.filter(item => !item.external)
+app.get('/trip', (req, res) => {
+    res.render('trip', {title: "Трипы"});
+})
+
+app.get('/shop', (req, res) => {
+    res.render('shop', {title: "Магазин"});
+})
+
+let projects = static.projects.code
 
 for (let key in projects) {
 	let project = projects[key]
