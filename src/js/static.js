@@ -65,6 +65,105 @@ projects =
 	}],
 }
 
+trips = [
+	{
+		name: 'Казань',
+		year: 2021,
+		preview: '/static/img/trip/kazan2021.jpg',
+		url: 'https://www.youtube.com/watch?v=gsrNwu9OSYQ',
+	},
+	{
+		name: 'Москва',
+		year: 2021,
+		preview: '/static/img/trip/moscow2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Краснодар и Новороссийск',
+		year: 2021,
+		preview: '/static/img/trip/krasnodar_novorossiysk_2021.jpg',
+		url: 'https://www.youtube.com/watch?v=WJ74FRhSjeI',
+	},
+	{
+		name: 'Волгоград',
+		year: 2021,
+		preview: '/static/img/trip/volgograd2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Минеральные Воды',
+		year: 2021,
+		preview: '/static/img/trip/minvody2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Москва — 2',
+		year: 2021,
+		preview: '/static/img/trip/moscow20212.jpg',
+		url: null,
+	},
+	{
+		name: 'Санкт-Петербург',
+		year: 2021,
+		preview: '/static/img/trip/saintpetersburg2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Ростов-на-Дону',
+		year: 2021,
+		preview: '/static/img/trip/rostovondon2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Ярославль',
+		year: 2021,
+		preview: '/static/img/trip/yaroslavl2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Тверь',
+		year: 2021,
+		preview: '/static/img/trip/tver2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Санкт-Петербург и Выборг',
+		year: 2021,
+		preview: '/static/img/trip/vyborg2021.jpg',
+		url: null,
+	},
+	{
+		name: 'Владикавказ',
+		year: 2022,
+		preview: '/static/img/trip/vladikavkaz2022.jpg',
+		url: null,
+	},
+	{
+		name: 'Сочи, Адлер и Сириус',
+		year: 2022,
+		preview: '/static/img/trip/sochi2022.jpg',
+		url: null,
+	},
+	{
+		name: 'Таганрог',
+		year: 2022,
+		preview: '/static/img/trip/taganrog2022.jpg',
+		url: null,
+	},
+	{
+		name: 'Новороссийск',
+		year: 2022,
+		preview: '/static/img/trip/novorossiysk2022.jpg',
+		url: null,
+	},
+	{
+		name: 'Москва',
+		year: 2022,
+		preview: '/static/img/trip/moscow2022.jpg',
+		url: null,
+	},
+]
+
 verdicts = {
 	"verdict-ok": ["Все тесты пройдены, решение верное.", good_color],
 	"verdict-wa": ["Выходные данные программы не совпадают с правильным ответом.", bad_color],

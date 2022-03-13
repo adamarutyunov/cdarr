@@ -3,6 +3,43 @@ extends header.pug
 include mixins.pug
 
 block project
-    h4
-        | Трипы
+	h4
+		| Трипы
+
+	lspace
+	
+	div.action-block
+		div.action-logo.rounded
+			a.implicit(href='tg://resolve?domain=cdarrgone')
+				img(src='/static/img/cdarrgone.jpg')
+		div.action-description
+			span
+				| Телеграм-канал про поездки:
+			br
+			a(href='tg://resolve?domain=cdarrgone')
+				| Адам Арутюнов поехал в
+
+	mspace
+
+	.trips
+		- trips.sort(t => t.url ? -1 : 1)
+		each trip in trips
+			if trip.url
+				.trip
+					a.implicit(href=trip.url)
+						.preview
+							img(src=trip.preview)
+						.name
+							a(href=trip.url)
+								=trip.name
+						.year
+							=trip.year
+			else
+				.trip.no-url
+					.preview
+						img(src=trip.preview)
+					.name
+						=trip.name
+					.year
+						=trip.year
 

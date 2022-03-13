@@ -26,6 +26,10 @@ app.get('/trip', (req, res) => {
     res.render('trip', {title: "Трипы"});
 })
 
+app.get('/shop', (req, res) => {
+    res.render('shop', {title: "Магазин"});
+})
+
 let projects = static.projects.code
 
 for (let key in projects) {
