@@ -9,7 +9,8 @@ mixin content-block(logo_url, title, url, description, external=false, news=fals
         div.description
           h5.project-title
             span.a(href=url)
-              =title
+                =title
+            |  
             if external == true
               img.external-link(src="/static/img/external_link.png")
             if news == true
@@ -60,6 +61,17 @@ block content
       a(href="/metro")
         | Метро
       | ⋅
+      a(href="/shop")
+        | <b>?????????</b>
+    #menu-mobile
+      a.dashed(href="#text")
+        | Пишу
+      a.dashed(href="#code")
+        | Мешки ворочаю
+      a(href="/trip")
+        | Трипы
+      a(href="/metro")
+        | Метро
       a(href="/shop")
         | <b>?????????</b>
 

@@ -134,6 +134,9 @@ p {
     background-color: #222;
     color: white;
     border-radius: 10px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow-y: scroll;
     font-size: 2em; }
     #main #menu a {
       margin: 0 10px;
@@ -142,6 +145,22 @@ p {
       #main #menu a:hover {
         color: #aaa !important;
         border-color: #aaa !important; }
+  #main #menu-mobile {
+    display: none; }
+    #main #menu-mobile a {
+      line-height: .9;
+      display: inline-block;
+      width: max-content;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: .3em .2em .15em .2em;
+      background-color: #222;
+      border-radius: 10px;
+      font-size: 3em;
+      color: white;
+      border: none; }
+      #main #menu-mobile a:hover {
+        color: #aaa !important; }
 
 #project {
   margin: 0 10%;
@@ -445,6 +464,8 @@ xspace {
   padding: 25px 30px; }
   .project-description-wrapper span.big {
     margin-bottom: 20px; }
+  .project-description-wrapper img {
+    display: inline; }
 
 .alpha {
   background-color: rgba(255, 255, 255, 0.7); }
@@ -506,7 +527,6 @@ span.gradient {
 
 .external-link {
   width: 0.7em;
-  margin-left: 15px;
   margin-bottom: -0.05em; }
 
 .new-project {
@@ -566,6 +586,10 @@ span.gradient {
 @media (max-width: 1000px) {
   #main {
     margin: 0 75px; }
+    #main #menu {
+      display: none; }
+    #main #menu-mobile {
+      display: inline-block; }
   h1 {
     font-size: 300pt; }
   h2 {
