@@ -11,6 +11,13 @@ const static = require('./src/js/static.js')
 
 app.set('views', './src/pug')
 app.set('view engine', 'pug');
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next();
+});
+
 app.use('/static', express.static('static'));
 
 
