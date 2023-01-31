@@ -19,7 +19,7 @@ html
 
 header.big
     margin: 10px 75px
-    height: 615px
+    height: 410px
 
 
 footer
@@ -134,13 +134,16 @@ p
         display: inline-block
 
         padding: 20px 20px 15px 20px
-        background-color: #222
         color: white
-        border-radius: 10px
+        backdrop-filter: blur(20px)
+        background: rgba(0, 0, 0, .15)
+        border-radius: 15px
 
         max-width: 100%
         white-space: nowrap
         overflow-y: scroll
+
+        margin-bottom: 1em
 
         font-size: 2em
 
@@ -149,37 +152,15 @@ p
             color: white
             border-color: white
 
+            transition: color .1s ease, border-color .1s ease
+
             &:hover
-                color: #aaa !important
-                border-color: #aaa !important
+                color: #ccc !important
+                border-color: #ccc !important
     
-    #menu-mobile
-        display: none
-
-        a
-            line-height: .9
-            display: inline-block
-            width: max-content
-            margin-right: 10px
-            margin-bottom: 10px
-
-            padding: .3em .2em .15em .2em
-
-            background-color: #222
-            border-radius: 10px
-            font-size: 3em
-
-            color: white
-            border: none
-
-            &:hover
-                color: #aaa !important
-                
-
-
 
 #project
-    margin: 0 10%
+    margin: 0 7%
     padding-bottom: 300px
     width: 75%
 

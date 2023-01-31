@@ -25,18 +25,6 @@ app.get('/', (req, res) => {
     res.render('index', {title: "Я"});
 })
 
-app.get('/metro', (req, res) => {
-    res.render('metro/index', {title: "Метро"});
-})
-
-app.get('/trip', (req, res) => {
-    res.render('trip', {title: "Трипы"});
-})
-
-app.get('/shop', (req, res) => {
-    res.render('shop', {title: "Магазин"});
-})
-
 let projects = static.projects.code
 
 for (let key in projects) {
@@ -50,10 +38,6 @@ for (let key in projects) {
 		})
 	})
 }
-
-app.get('/kfssr', (req, res) => {
-    res.send('Слава Карелии!')
-})
 
 
 for (station in static.stations) {

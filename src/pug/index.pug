@@ -4,7 +4,10 @@ mixin content-block(logo_url, title, url, description, external=false, news=fals
   a.implicit(href=url)
     div.content-block
       div.project-logo.alpha.rounded
-        img(src=logo_url)
+        if logo_url.endsWith('png')
+            img(src=logo_url)
+        else
+            video(src=logo_url muted loop autoplay)
       div.project-description-wrapper.alpha.rounded
         div.description
           h5.project-title
@@ -15,7 +18,7 @@ mixin content-block(logo_url, title, url, description, external=false, news=fals
               img.external-link(src="/static/img/external_link.png")
             if news == true
               span.new-project
-                | N E W 
+                | NEW 
 
           sspace
           sspace
@@ -54,26 +57,6 @@ block content
       | ⋅
       a.dashed(href="#code")
         | Мешки ворочаю
-      | ⋅
-      a(href="/trip")
-        | Трипы
-      | ⋅
-      a(href="/metro")
-        | Метро
-      | ⋅
-      a(href="/shop")
-        | <b>?????????</b>
-    #menu-mobile
-      a.dashed(href="#text")
-        | Пишу
-      a.dashed(href="#code")
-        | Мешки ворочаю
-      a(href="/trip")
-        | Трипы
-      a(href="/metro")
-        | Метро
-      a(href="/shop")
-        | <b>?????????</b>
 
     
     #text
