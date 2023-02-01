@@ -438,6 +438,8 @@ xspace {
     justify-content: center;
     flex: 0 0 350px;
     width: 100%; }
+    .content-block .project-logo video {
+      border-radius: 50%; }
   .content-block .project-description-wrapper {
     display: flex;
     flex-direction: row;
