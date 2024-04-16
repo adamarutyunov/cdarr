@@ -7,7 +7,7 @@ const DEBUG = (process.argv[2] == "-D")
 var config = require("./config.json")
 const port = config.port
 
-const static = require('./src/js/static.js')
+const static = require('./static/script/static.js')
 
 app.set('views', './src/pug')
 app.set('view engine', 'pug');

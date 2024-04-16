@@ -29,7 +29,7 @@ html {
 
 @font-face {
   font-family: 'GolosTextVF';
-  src: url(/static/fonts/GolosTextVF.ttf);
+  src: url("/static/fonts/GolosTextVF.ttf");
   font-weight: normal;
   font-style: normal; }
 
@@ -179,177 +179,6 @@ lspace {
 xspace {
   display: block;
   height: 100px; }
-
-.right-gradient {
-  color: linear-gradient(to right, #c7100c 0%, #b41020 7%, #6e1d53 43%, #3b2678 81%, #3f00be 100%); }
-
-.light-grey {
-  color: #f1f1f1; }
-
-.grey {
-  color: #cccbcb; }
-
-.dark-grey {
-  color: #464646; }
-
-.code {
-  color: #3fbfd8; }
-
-.hover-color {
-  color: #4460ff; }
-
-.light-green {
-  color: #23d800; }
-
-.verdicts {
-  display: flex;
-  flex-wrap: wrap; }
-  .verdicts .verdict {
-    display: inline-block;
-    height: 1em;
-    font-size: 50pt;
-    color: #f1f1f1;
-    font-variation-settings: "wght" 650;
-    margin-right: .3em; }
-
-#verdict-description {
-  display: block;
-  min-height: 50px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-variation-settings: "wght" 650; }
-
-#verdict-wrapper {
-  height: 2.5em; }
-
-.protocol-block {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: start; }
-
-#protocol-code {
-  border-radius: 15px;
-  background-color: #464646;
-  color: #3fbfd8;
-  font-family: "PT Mono";
-  font-weight: bold;
-  padding: 35px;
-  width: 100%;
-  max-width: 600px;
-  box-sizing: border-box;
-  margin-top: 25px;
-  overflow: hidden;
-  height: 340px;
-  transition: all 100ms;
-  font-size: 21pt; }
-
-#pretty-placeholder {
-  color: #4460ff; }
-
-#protocol-menu {
-  width: 600px; }
-  #protocol-menu span {
-    display: inline-block;
-    white-space: nowrap;
-    margin-right: 25px;
-    margin-bottom: 8px;
-    cursor: pointer;
-    font-size: 18pt;
-    color: #cccbcb; }
-    #protocol-menu span.active {
-      color: black;
-      cursor: default; }
-
-.label {
-  font-size: 18pt;
-  color: #cccbcb; }
-
-.qladmin-row-row {
-  display: flex;
-  justify-content: left;
-  align-items: center; }
-  .qladmin-row-row div {
-    margin-right: 30px; }
-
-.column-row {
-  display: flex;
-  justify-content: left;
-  align-items: flex-start; }
-  .column-row div {
-    margin-right: 30px; }
-
-.untitled-weapons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 900px; }
-  .untitled-weapons .weapon img {
-    margin-bottom: 15px;
-    height: 250px;
-    width: auto; }
-
-.untitled-balls {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1000px; }
-  .untitled-balls .ball img {
-    margin-bottom: 15px;
-    height: 250px;
-    width: auto;
-    transform: rotate(-90deg); }
-
-.untitled-potions {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  .untitled-potions .potion img {
-    margin-bottom: 15px;
-    width: 150px; }
-  .untitled-potions .potion p {
-    text-align: center; }
-
-.untitled-zombies {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  .untitled-zombies .zombie#up, .untitled-zombies .zombie#down {
-    text-align: center; }
-  .untitled-zombies .zombie#left {
-    text-align: right; }
-  .untitled-zombies .zombie img {
-    margin-bottom: 15px;
-    height: 350px;
-    width: auto; }
-
-.untitled-men {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  .untitled-men .man {
-    text-align: center; }
-    .untitled-men .man img {
-      margin-bottom: 15px;
-      height: 350px;
-      width: auto; }
-
-.untitled-players {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  max-width: 500px; }
-  .untitled-players .player {
-    text-align: center;
-    margin-right: 10px; }
-    .untitled-players .player img {
-      margin-bottom: 15px;
-      height: 300px;
-      width: auto; }
-
-.untitled-violet-eye {
-  max-width: 500px; }
 
 .right-gradient {
   color: linear-gradient(to right, #c7100c 0%, #b41020 7%, #6e1d53 43%, #3b2678 81%, #3f00be 100%); }
@@ -675,4 +504,175 @@ span.gradient {
     width: 100%;
     padding: 20px 0 10px 0;
     margin-top: -150px; } }
+
+.right-gradient {
+  color: linear-gradient(to right, #c7100c 0%, #b41020 7%, #6e1d53 43%, #3b2678 81%, #3f00be 100%); }
+
+.light-grey {
+  color: #f1f1f1; }
+
+.grey {
+  color: #cccbcb; }
+
+.dark-grey {
+  color: #464646; }
+
+.code {
+  color: #3fbfd8; }
+
+.hover-color {
+  color: #4460ff; }
+
+.light-green {
+  color: #23d800; }
+
+.verdicts {
+  display: flex;
+  flex-wrap: wrap; }
+  .verdicts .verdict {
+    display: inline-block;
+    height: 1em;
+    font-size: 50pt;
+    color: #f1f1f1;
+    font-variation-settings: "wght" 650;
+    margin-right: .3em; }
+
+#verdict-description {
+  display: block;
+  min-height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-variation-settings: "wght" 650; }
+
+#verdict-wrapper {
+  height: 2.5em; }
+
+.protocol-block {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: start; }
+
+#protocol-code {
+  border-radius: 15px;
+  background-color: #464646;
+  color: #3fbfd8;
+  font-family: "PT Mono";
+  font-weight: bold;
+  padding: 35px;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  margin-top: 25px;
+  overflow: hidden;
+  height: 340px;
+  transition: all 100ms;
+  font-size: 21pt; }
+
+#pretty-placeholder {
+  color: #4460ff; }
+
+#protocol-menu {
+  width: 600px; }
+  #protocol-menu span {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 25px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 18pt;
+    color: #cccbcb; }
+    #protocol-menu span.active {
+      color: black;
+      cursor: default; }
+
+.label {
+  font-size: 18pt;
+  color: #cccbcb; }
+
+.qladmin-row-row {
+  display: flex;
+  justify-content: left;
+  align-items: center; }
+  .qladmin-row-row div {
+    margin-right: 30px; }
+
+.column-row {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start; }
+  .column-row div {
+    margin-right: 30px; }
+
+.untitled-weapons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px; }
+  .untitled-weapons .weapon img {
+    margin-bottom: 15px;
+    height: 250px;
+    width: auto; }
+
+.untitled-balls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px; }
+  .untitled-balls .ball img {
+    margin-bottom: 15px;
+    height: 250px;
+    width: auto;
+    transform: rotate(-90deg); }
+
+.untitled-potions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .untitled-potions .potion img {
+    margin-bottom: 15px;
+    width: 150px; }
+  .untitled-potions .potion p {
+    text-align: center; }
+
+.untitled-zombies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .untitled-zombies .zombie#up, .untitled-zombies .zombie#down {
+    text-align: center; }
+  .untitled-zombies .zombie#left {
+    text-align: right; }
+  .untitled-zombies .zombie img {
+    margin-bottom: 15px;
+    height: 350px;
+    width: auto; }
+
+.untitled-men {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .untitled-men .man {
+    text-align: center; }
+    .untitled-men .man img {
+      margin-bottom: 15px;
+      height: 350px;
+      width: auto; }
+
+.untitled-players {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 500px; }
+  .untitled-players .player {
+    text-align: center;
+    margin-right: 10px; }
+    .untitled-players .player img {
+      margin-bottom: 15px;
+      height: 300px;
+      width: auto; }
+
+.untitled-violet-eye {
+  max-width: 500px; }
 
