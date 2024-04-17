@@ -1,6 +1,8 @@
 html
   head
-    title=title + " — Адам Арутюнов"
+    title
+      block title
+      |  — Адам Арутюнов
 
     link(href="/static/css/style.css", rel="stylesheet", type="text/css")
     link(rel="shortcut icon", href="/static/img/favicon.ico", type="image/x-icon")

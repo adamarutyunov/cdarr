@@ -11,7 +11,8 @@ mixin action-telegram
                 | Нет, я не псих
 
 
-mixin action-project(project)
+mixin action-project(slug)
+    - var project = projects.find(p => p.url === slug)
     div.action-block
         div.action-logo
             a.implicit(href=project.url)

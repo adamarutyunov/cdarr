@@ -10,27 +10,19 @@ const viewsDir = path.resolve(__dirname, '..', 'src', 'pug');
 const staticDir = path.resolve(__dirname, '..', 'static');
 const siteDir = path.resolve(__dirname, '..', 'site');
 
+const static = require('./static/script/static.js')
+const projects = static.projects.code
+
 const pugOptions = {
   basedir: viewsDir,
   pretty: true,
 };
 
-const getLocals = pugPath => {
-  const viewPath = `/${path.relative(viewsDir, pugPath)}`;
-  const url = viewPath.replace(/(index\.pug|\.pug)$/gi, '');
-
-  const req = { url, originalUrl: url };
-  const res = { locals: {} };
-  const next = () => {};
-
-  helpers()(req, res, next);
-
-  return res.locals;
-};
+const locals = {projects}
 
 const compilePugToHtml = pugPath => {
   const template = pug.compileFile(pugPath, pugOptions);
-  const html = template(getLocals(pugPath));
+  const html = template(locals);
   const fileDir = path.dirname(path.relative(config.views, pugPath));
   const fileName = path.basename(pugPath, '.pug');
   const htmlPath = path.resolve(siteDir, fileDir, `${fileName}.html`);

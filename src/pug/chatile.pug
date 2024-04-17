@@ -2,6 +2,9 @@ extends header.pug
 
 include mixins.pug
 
+block title
+  | Chatile
+
 block project
   h3
     | Chatile
@@ -114,5 +117,5 @@ block project
 
   .actions
     +action-telegram
-    +action-project(next_project)
+    +action-project('district61')
 

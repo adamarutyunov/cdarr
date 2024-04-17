@@ -1,15 +1,17 @@
 const path = require('path');
+const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/sass/main',
   resolve: {
     extensions: ['.sass'],
   },
   output: {
-    path: path.resolve(__dirname, 'static/css'),
+    path: path.resolve(__dirname, '../static/css'),
   },
   module: {
     rules: [
@@ -31,5 +33,5 @@ module.exports = {
       filename: "style.css",
     }),
   ],
-  devtool: false
+  devtool: false,
 };

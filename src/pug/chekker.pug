@@ -2,6 +2,9 @@ extends header.pug
 
 include mixins.pug
 
+block title
+  | Чеккер
+
 block project
   h3
     | Чеккер
@@ -54,5 +57,5 @@ block project
 
   .actions
     +action-telegram
-    +action-project(next_project)
+    +action-project('qladmin')
 

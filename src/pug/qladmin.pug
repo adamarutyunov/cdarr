@@ -2,6 +2,9 @@ extends header.pug
 
 include mixins.pug
 
+block title
+  | QLAdmin
+
 block project
   h3
     | QLAdmin
@@ -81,5 +84,5 @@ block project
 
   .actions
     +action-telegram
-    +action-project(next_project)
+    +action-project('memerator')
 

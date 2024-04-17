@@ -2,6 +2,9 @@ extends header.pug
 
 include mixins.pug
 
+block title
+  | Пайкон
+
 block project
   h3
     | Пайкон
@@ -85,4 +88,4 @@ block project
 
   .actions
     +action-telegram
-    +action-project(next_project)
+    +action-project('untitled')

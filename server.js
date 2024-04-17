@@ -22,30 +22,15 @@ app.use('/static', express.static('static'));
 
 
 app.get('/', (req, res) => {
-    res.render('index', {title: "Я"});
+    res.render('index');
 })
 
 let projects = static.projects.code
 
-for (let key in projects) {
-	let project = projects[key]
-
+for (let project of projects) {
 	app.get('/' + project.url, (req, res) => {
-		res.render(project.url, {
-			project: project, 
-			next_project: projects[(parseInt(key) + 1) % projects.length],
-			title: project.title,
-		})
+		res.render(project.url, { projects })
 	})
-}
-
-
-for (station in static.stations) {
-    if (station.visited) {
-        app.get(station.url, (req, res) => {
-            res.render(station.url, {title: station.name})
-        })
-    }
 }
 
 
