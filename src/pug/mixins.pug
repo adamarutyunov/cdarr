@@ -12,14 +12,14 @@ mixin action-telegram
 
 
 mixin action-project(slug)
-    - var project = projects.find(p => p.url === slug)
+    - var project = projects.code.find(p => p.url === slug)
     div.action-block
         div.action-logo
-            a.implicit(href=project.url)
+            a.implicit(href='/' + project.url)
                 img(src=project.logo_url)
         div.action-description
             span
                 | Дальше:
             br
-            a(href=project.url)
+            a(href='/' + project.url)
                 =project.title

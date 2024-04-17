@@ -3,29 +3,38 @@ const pug = require('pug');
 const fs = require('fs-extra');
 const globby = require('globby');
 const { ncp } = require('ncp');
-const config = require('../src/server/config');
-const helpers = require('../src/server/helpers');
 
 const viewsDir = path.resolve(__dirname, '..', 'src', 'pug');
 const staticDir = path.resolve(__dirname, '..', 'static');
 const siteDir = path.resolve(__dirname, '..', 'site');
 
-const static = require('./static/script/static.js')
-const projects = static.projects.code
+const static = require('../static/script/static.js')
+const projects = static.projects
 
 const pugOptions = {
   basedir: viewsDir,
   pretty: true,
+  projects
 };
 
-const locals = {projects}
+const pugIgnore = ['base', 'mixins']
+const pugNoSubfolder = ['index']
 
 const compilePugToHtml = pugPath => {
-  const template = pug.compileFile(pugPath, pugOptions);
-  const html = template(locals);
-  const fileDir = path.dirname(path.relative(config.views, pugPath));
   const fileName = path.basename(pugPath, '.pug');
-  const htmlPath = path.resolve(siteDir, fileDir, `${fileName}.html`);
+
+  if (pugIgnore.includes(fileName)) return;
+
+  const html = pug.renderFile(pugPath, pugOptions);
+  const fileDir = path.dirname(path.relative(viewsDir, pugPath));
+
+  let htmlPath
+  if (pugNoSubfolder.includes(fileName)) {
+    htmlPath = path.resolve(siteDir, fileDir, `${fileName}.html`);
+  } else {
+    htmlPath = path.resolve(siteDir, fileDir, fileName, 'index.html');
+  }
+
   const htmlDir = path.dirname(htmlPath);
 
   if (!fs.existsSync(htmlDir)) fs.mkdirSync(htmlDir, { recursive: true });
@@ -39,9 +48,10 @@ if (fs.existsSync(siteDir)) {
 
 // Create site's directory.
 fs.mkdirSync(siteDir);
+fs.mkdirSync(path.resolve(siteDir, 'static'));
 
 // Build pug files to html files.
-globby(config.autoroutes).then(pugPaths => pugPaths.forEach(compilePugToHtml));
+globby(viewsDir).then(pugPaths => pugPaths.forEach(compilePugToHtml));
 
 // Copy static files.
-ncp(staticDir, siteDir);
+ncp(staticDir, path.resolve(siteDir, 'static'));

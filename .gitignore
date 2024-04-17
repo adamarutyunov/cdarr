@@ -119,3 +119,5 @@ dist
 
 # macOS temp file
 *.DS_Store
+
+/site/

@@ -25,9 +25,9 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
-let projects = static.projects.code
+let projects = static.projects
 
-for (let project of projects) {
+for (let project of projects.code) {
 	app.get('/' + project.url, (req, res) => {
 		res.render(project.url, { projects })
 	})
